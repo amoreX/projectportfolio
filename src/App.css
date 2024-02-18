@@ -35,17 +35,16 @@ body {
   transition: 0.28s ease-in-out;
 }
 #wrapper #shape1 #text {
-  font-size: 200px;
+  font-size: 300px;
   opacity: 0;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  transition: 0.39s ease-in;
+  transition: 0.39s ease-in, font 0.01s ease;
   cursor: default;
 }
 #wrapper #shape1:hover #text {
   opacity: 1;
-  animation: epic 3.6s infinite ease-in-out;
 }
 #wrapper #shape2 {
   position: absolute;
@@ -58,17 +57,16 @@ body {
   transition: 0.28s ease-in-out;
 }
 #wrapper #shape2 #text {
-  font-size: 200px;
+  font-size: 300px;
   opacity: 0;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  transition: 0.39s ease-in;
+  transition: 0.39s ease-in, font 0.01s ease;
   cursor: default;
 }
 #wrapper #shape2:hover #text {
   opacity: 1;
-  animation: epic 3.6s infinite ease-in-out;
 }
 #wrapper #shape3 {
   position: absolute;
@@ -81,17 +79,16 @@ body {
   transition: 0.28s ease-in-out;
 }
 #wrapper #shape3 #text {
-  font-size: 200px;
+  font-size: 300px;
   opacity: 0;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  transition: 0.39s ease-in;
+  transition: 0.39s ease-in, font 0.01s ease;
   cursor: default;
 }
 #wrapper #shape3:hover #text {
   opacity: 1;
-  animation: epic 3.6s infinite ease-in-out;
 }
 #wrapper #shape4 {
   position: absolute;
@@ -104,17 +101,16 @@ body {
   transition: 0.28s ease-in-out;
 }
 #wrapper #shape4 #text {
-  font-size: 200px;
+  font-size: 300px;
   opacity: 0;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  transition: 0.39s ease-in;
+  transition: 0.39s ease-in, font 0.01s ease;
   cursor: default;
 }
 #wrapper #shape4:hover #text {
   opacity: 1;
-  animation: epic 3.6s infinite ease-in-out;
 }
 #wrapper #shape5 {
   position: absolute;
@@ -127,17 +123,16 @@ body {
   transition: 0.28s ease-in-out;
 }
 #wrapper #shape5 #text {
-  font-size: 200px;
+  font-size: 300px;
   opacity: 0;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  transition: 0.39s ease-in;
+  transition: 0.39s ease-in, font 0.01s ease;
   cursor: default;
 }
 #wrapper #shape5:hover #text {
   opacity: 1;
-  animation: epic 3.6s infinite ease-in-out;
 }
 #wrapper #shape6 {
   position: absolute;
@@ -150,17 +145,16 @@ body {
   transition: 0.28s ease-in-out;
 }
 #wrapper #shape6 #text {
-  font-size: 200px;
+  font-size: 300px;
   opacity: 0;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  transition: 0.39s ease-in;
+  transition: 0.39s ease-in, font 0.01s ease;
   cursor: default;
 }
 #wrapper #shape6:hover #text {
   opacity: 1;
-  animation: epic 3.6s infinite ease-in-out;
 }
 
 #name {

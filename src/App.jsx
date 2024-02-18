@@ -1,16 +1,26 @@
 import { useState } from 'react'
-import Landing from "./Comp/Landing"
+import { useNavigate,createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Landing from "./Comp/Landingfr"
+import Doch from "./Comp/Doch"
 import './App.css'
 
+
+const router=createBrowserRouter([
+  {
+    path: "/",
+    element: <Landing />
+  },
+  {
+    path:"/Doch",
+    element: <Doch />
+  }
+])
 function App() {
 
 
   return (
     <>
-    <div id="main">
-      <Landing></Landing>
-      <div id="name">Nihal Rahman</div>
-    </div>
+    <RouterProvider router={router}></RouterProvider>
     </>
   )
 }

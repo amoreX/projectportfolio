@@ -1,0 +1,19 @@
+body {
+  margin: 0px;
+  overflow: hidden;
+}
+
+#main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2E3659;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+#main-container #text {
+  font-size: 550px;
+}/*# sourceMappingURL=Doch.css.map */

@@ -1,9 +1,12 @@
  
 import { useState,useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Landing(){
 
+    const navigate= useNavigate();
     const [number,setNumber]=useState(0);
+    const [text,setText]=useState(false);
     
     const [style1, setStyles1] = useState({
         height: "0%",
@@ -52,7 +55,7 @@ export default function Landing(){
     const theme2=[["50%","50%","50%","50%","100%","30%"],["25%","40%","40%","25%","35%","15%"],["20%","10%","10%","20%","10%","20%"],["0%","50%","0%","50%","0%","70%"],["0%","0%","25%","40%","65%","85%"]]
     const theme3=[["50%","50%","50%","50%","100%","30%"],["25%","40%","40%","25%","35%","15%"],["0px 0px 0px 60%","0px 50% 50% 0px","40%"," 0px 0px 0px 60%","0px 50% 0px 0px","50% 0px 0px 0px"],["0%","50%","0%","50%","0%","70%"],["0%","0%","25%","40%","65%","85%"]]
     const theme4=[["50%","75%","75%","15%","100%","30%"],["15%","15%","15%","15%","25%","15%"],["0px 0px 0px 0px","0px 0px 0px 0px","0px"," 0px 0px 0px 0px","0px 0px 0px 0px","0px 0px 0px 0px"],["0%","0%","25%","25%","0%","45%"],["0%","15%","30%","45%","60%","85%"]]
-    const theme5=[["50%","75%","75%","15%","100%","30%"],["15%","15%","15%","15%","25%","15%"],["50%","50%","50%","50%","50%","50%"],["0%","15%","30%","45%","60%","85%"]]
+    const theme5=[["50%","75%","75%","15%","100%","30%"],["15%","15%","15%","15%","25%","15%"],["50%","50%","50%","50%","50%","50%"],["0%","0%","25%","25%","0%","45%"],["0%","15%","30%","45%","60%","85%"]]
     
     const height=[theme1[0],theme2[0],theme3[0],theme4[0],theme5[0]];
     const width=[theme1[1],theme2[1],theme3[1],theme4[1],theme5[1]];
@@ -65,8 +68,8 @@ export default function Landing(){
             setNumber((prevNumber) => {
                 let p;
                 do {
-                    p = Math.floor(Math.random() * 4);
-                } while (p === prevNumber); // Keep generating until p is different from prevNumber
+                    p = Math.floor(Math.random() * 5);
+                } while (p === prevNumber); 
                 console.log(p);
                 return p;
             });
@@ -127,10 +130,17 @@ export default function Landing(){
             height:"500px",
             width:"1000px",
             scale:"2",
-            zIndex:"4"
+            zIndex:"4",
+            color:"black"
         })
+        setText(true);
+        setTimeout(()=>{
+            navigate("/Doch");
+
+        },200);
     }
     const handleclick2=()=>{
+        setText(true);
         setStyles2({
             height:"500px",
             width:"1000px",
@@ -145,8 +155,11 @@ export default function Landing(){
             scale:"2",
             zIndex:"4"
         })
+        setText(true);
     }
+
     const handleclick4=()=>{
+        setText(true);
         setStyles4({
             height:"500px",
             width:"1000px",
@@ -155,6 +168,7 @@ export default function Landing(){
         })
     }
     const handleclick5=()=>{
+        setText(true);
         setStyles5({
             height:"500px",
             width:"1000px",
@@ -163,6 +177,7 @@ export default function Landing(){
         })
     }
     const handleclick6=()=>{
+        setText(true);
         setStyles6({
             height:"500px",
             width:"1000px",
@@ -173,12 +188,12 @@ export default function Landing(){
 
     return(
         <div id="wrapper">
-            <div id="shape1" style={style1} onClick={()=>{handleclick1()}}><div id="text">Doch</div></div>
-            <div id="shape2" style={style2} onClick={()=>{handleclick2()}}><div id="text">Calculator</div></div>
-            <div id="shape3" style={style3} onClick={()=>{handleclick3()}}><div id="text">Weather</div></div>
-            <div id="shape4" style={style4} onClick={()=>{handleclick4()}}><div id="text">GIT</div></div>
-            <div id="shape5" style={style5} onClick={()=>{handleclick5()}}><div id="text">WPM</div></div>
-            <div id="shape6" style={style6} onClick={()=>{handleclick6()}}><div id="text">Me</div></div>
+            <div id="shape1" style={style1} onClick={()=>{handleclick1()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Doch</div></div>
+            <div id="shape2" style={style2} onClick={()=>{handleclick2()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Calculator</div></div>
+            <div id="shape3" style={style3} onClick={()=>{handleclick3()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Weather</div></div>
+            <div id="shape4" style={style4} onClick={()=>{handleclick4()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>GIT</div></div>
+            <div id="shape5" style={style5} onClick={()=>{handleclick5()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>WPM</div></div>
+            <div id="shape6" style={style6} onClick={()=>{handleclick6()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Me</div></div>
         </div>
     )
 }
