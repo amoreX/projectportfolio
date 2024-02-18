@@ -7,7 +7,10 @@ function App() {
 
   return (
     <>
+    <div id="main">
       <Landing></Landing>
+      <div id="name">Nihal Rahman</div>
+    </div>
     </>
   )
 }
