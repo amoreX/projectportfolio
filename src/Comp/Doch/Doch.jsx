@@ -1,8 +1,8 @@
 
 import {motion} from "framer-motion"
-import "./Doch.css"
+// import "./Doch.scss"
 export default function Doch(){
-	return(
+	return(	
 		<motion.div
 		id="main-container"
 		>
@@ -15,6 +15,7 @@ export default function Doch(){
 			transition={{
 				type:"tween",
 				ease:"easeOut",
+				duration:0.19
 			}}
 			animate={{
 				scale:1,

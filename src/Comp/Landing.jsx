@@ -1,26 +1,30 @@
  
 import { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import{motion} from "framer-motion"
 
 export default function Landing(){
 
     const navigate= useNavigate();
     const [number,setNumber]=useState(0);
+    const [reload,setReload]=useState(sessionStorage.getItem('checking'));
     const [text,setText]=useState(false);
     
     const [style1, setStyles1] = useState({
-        height: "0%",
-        width: "0%",
+        height: reload=="doch"?"100%":"0%",
+        width: reload=="doch"?"100%":"0%",
         borderRadius: "0%",
         top: "0%",
-        left: "0%"
+        left: "0%",
+        scale:reload=="doch"?"10":"1"
     });
     const [style2, setStyles2] = useState({
-        height: "0%",
-        width: "0%",
+        height: reload=="calc"?"100%":"0%",
+        width: reload=="calc"?"100%":"0%",
         borderRadius: "0%",
         top: "0%",
-        left: "0%"
+        left: "0%",
+        scale:reload=="calc"?"10":"1"
     });
     const [style3, setStyles3] = useState({
         height: "0%",
@@ -70,11 +74,13 @@ export default function Landing(){
                 do {
                     p = Math.floor(Math.random() * 5);
                 } while (p === prevNumber); 
-                console.log(p);
+                // console.log(p);
+                console.log(reload);
                 return p;
             });
-        }, 3000);
+
     
+        }, 3000);
         return () => {
             clearInterval(intervalId);
         };
@@ -127,26 +133,64 @@ export default function Landing(){
     
     const handleclick1=()=>{
         setStyles1({
+            zIndex:"4",
             height:"500px",
             width:"1000px",
             scale:"2",
-            zIndex:"4",
             color:"black"
         })
+        setStyles2({
+            opacity:0
+        })
+        setStyles3({
+            opacity:0
+        })
+        setStyles4({
+            opacity:0
+        })
+        setStyles5({
+            opacity:0
+        })
+        setStyles6({
+            opacity:0
+        })
         setText(true);
+
+        sessionStorage.setItem('checking', "doch");
+
         setTimeout(()=>{
             navigate("/Doch");
-
         },200);
     }
     const handleclick2=()=>{
         setText(true);
         setStyles2({
+            zIndex:"4",
             height:"500px",
             width:"1000px",
             scale:"2",
-            zIndex:"4"
         })
+        setStyles1({
+            opacity:0
+        })
+        setStyles3({
+            opacity:0
+        })
+        setStyles4({
+            opacity:0
+        })
+        setStyles5({
+            opacity:0
+        })
+        setStyles6({
+            opacity:0
+        })
+
+        sessionStorage.setItem('checking', "calc");
+            setTimeout(()=>{
+                navigate("/Calc");
+            },200);
+
     }
     const handleclick3=()=>{
         setStyles3({
@@ -154,6 +198,21 @@ export default function Landing(){
             width:"1000px",
             scale:"2",
             zIndex:"4"
+        })
+        setStyles1({
+            opacity:0
+        })
+        setStyles2({
+            opacity:0
+        })
+        setStyles4({
+            opacity:0
+        })
+        setStyles5({
+            opacity:0
+        })
+        setStyles6({
+            opacity:0
         })
         setText(true);
     }
@@ -188,8 +247,20 @@ export default function Landing(){
 
     return(
         <div id="wrapper">
-            <div id="shape1" style={style1} onClick={()=>{handleclick1()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Doch</div></div>
-            <div id="shape2" style={style2} onClick={()=>{handleclick2()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Calculator</div></div>
+            <motion.div id="shape1" 
+            initial={{scale:reload=="doch"?"20":"1",zIndex:reload=="doch"?"5":"2"}}
+            transition={{type:"tween",ease:"easeInOut",duration:0.29}}
+            animate={{scale:1}}
+            style={style1} onClick={()=>{handleclick1()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Doch</div>
+            </motion.div>
+
+            <motion.div
+             id="shape2"
+            initial={{scale:reload=="calc"?"20":"1",zIndex:reload=="calc"?"5":"2"}}
+            transition={{type:"tween",ease:"easeInOut",duration:0.29}}
+            animate={{scale:1}}
+             style={style2} onClick={()=>{handleclick2()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Calculator</div>
+             </motion.div>
             <div id="shape3" style={style3} onClick={()=>{handleclick3()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Weather</div></div>
             <div id="shape4" style={style4} onClick={()=>{handleclick4()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>GIT</div></div>
             <div id="shape5" style={style5} onClick={()=>{handleclick5()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>WPM</div></div>
