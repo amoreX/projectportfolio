@@ -1,6 +1,6 @@
 
 import {motion} from "framer-motion"
-// import "./Doch.scss"
+import "./style.css"
 export default function Doch(){
 	return(	
 		<motion.div

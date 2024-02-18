@@ -1,4 +1,4 @@
-import "./Calc.css"
+// import "./Calc.css"
 import {motion} from "framer-motion"
 export default function Calc(){
 	return(
