@@ -70,7 +70,7 @@ export default function Landing(){
                 console.log(p);
                 return p;
             });
-        }, 1500);
+        }, 2000);
     
         return () => {
             clearInterval(intervalId);
@@ -122,15 +122,63 @@ export default function Landing(){
         });
     }, [number]);
     
+    const handleclick1=()=>{
+        setStyles1({
+            height:"500px",
+            width:"1000px",
+            scale:"2",
+            zIndex:"4"
+        })
+    }
+    const handleclick2=()=>{
+        setStyles2({
+            height:"500px",
+            width:"1000px",
+            scale:"2",
+            zIndex:"4"
+        })
+    }
+    const handleclick3=()=>{
+        setStyles3({
+            height:"500px",
+            width:"1000px",
+            scale:"2",
+            zIndex:"4"
+        })
+    }
+    const handleclick4=()=>{
+        setStyles4({
+            height:"500px",
+            width:"1000px",
+            scale:"2",
+            zIndex:"4"
+        })
+    }
+    const handleclick5=()=>{
+        setStyles5({
+            height:"500px",
+            width:"1000px",
+            scale:"2",
+            zIndex:"4"
+        })
+    }
+    const handleclick6=()=>{
+        setStyles6({
+            height:"500px",
+            width:"1000px",
+            scale:"2",
+            zIndex:"4"
+        })
+    }
 
     return(
         <div id="wrapper">
-            <div id="shape1" style={style1}></div>
-            <div id="shape2" style={style2}></div>
-            <div id="shape3" style={style3}></div>
-            <div id="shape4" style={style4}></div>
-            <div id="shape5" style={style5}></div>
-            <div id="shape6" style={style6}></div>
+            <div id="shape1" style={style1} onClick={()=>{handleclick1()}}><div id="text">N</div></div>
+            <div id="shape2" style={style2} onClick={()=>{handleclick2()}}><div id="text">I</div></div>
+            <div id="shape3" style={style3} onClick={()=>{handleclick3()}}><div id="text">H</div></div>
+            <div id="shape4" style={style4} onClick={()=>{handleclick4()}}><div id="text">A</div></div>
+            <div id="shape5" style={style5} onClick={()=>{handleclick5()}}><div id="text">L</div></div>
+            <div id="shape6" style={style6} onClick={()=>{handleclick6()}}><div id="text">:)</div></div>
         </div>
     )
 }

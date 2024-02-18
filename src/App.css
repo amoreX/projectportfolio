@@ -12,35 +12,161 @@ body {
   height: 60vh;
   display: flex;
   position: relative;
-  overflow: hidden;
 }
 #wrapper #shape1 {
   position: absolute;
   background-color: #2E3659;
   transition: 0.28s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+}
+#wrapper #shape1 #text {
+  font-size: 400px;
+  opacity: 0;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  transition: 0.29s ease-in-out;
+  cursor: default;
+}
+#wrapper #shape1:hover #text {
+  opacity: 1;
+}
+#wrapper #shape1:click {
+  scale: 3;
 }
 #wrapper #shape2 {
   position: absolute;
   background-color: #6B5B7F;
   transition: 0.28s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+}
+#wrapper #shape2 #text {
+  font-size: 400px;
+  opacity: 0;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  transition: 0.29s ease-in-out;
+  cursor: default;
+}
+#wrapper #shape2:hover #text {
+  opacity: 1;
+}
+#wrapper #shape2:click {
+  scale: 3;
 }
 #wrapper #shape3 {
   position: absolute;
   background-color: #AA8BA3;
   transition: 0.28s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+}
+#wrapper #shape3 #text {
+  font-size: 400px;
+  opacity: 0;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  transition: 0.29s ease-in-out;
+  cursor: default;
+}
+#wrapper #shape3:hover #text {
+  opacity: 1;
+}
+#wrapper #shape3:click {
+  scale: 3;
 }
 #wrapper #shape4 {
   position: absolute;
   background-color: #CA757C;
   transition: 0.28s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+}
+#wrapper #shape4 #text {
+  font-size: 400px;
+  opacity: 0;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  transition: 0.29s ease-in-out;
+  cursor: default;
+}
+#wrapper #shape4:hover #text {
+  opacity: 1;
+}
+#wrapper #shape4:click {
+  scale: 3;
 }
 #wrapper #shape5 {
   position: absolute;
   background-color: #363738;
   transition: 0.28s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+}
+#wrapper #shape5 #text {
+  font-size: 400px;
+  opacity: 0;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  transition: 0.29s ease-in-out;
+  cursor: default;
+}
+#wrapper #shape5:hover #text {
+  opacity: 1;
+}
+#wrapper #shape5:click {
+  scale: 3;
 }
 #wrapper #shape6 {
   position: absolute;
   background-color: #3F5B8D;
   transition: 0.28s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+}
+#wrapper #shape6 #text {
+  font-size: 400px;
+  opacity: 0;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  transition: 0.29s ease-in-out;
+  cursor: default;
+}
+#wrapper #shape6:hover #text {
+  opacity: 1;
+}
+#wrapper #shape6:click {
+  scale: 3;
+}
+
+@media screen and (max-width: 1100px) {
+  #wrapper {
+    width: 90vw;
+    height: 80vw;
+  }
 }/*# sourceMappingURL=App.css.map */
