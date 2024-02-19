@@ -6,7 +6,7 @@ import{motion} from "framer-motion"
 export default function Landing(){
 
     const navigate= useNavigate();
-    const [number,setNumber]=useState(0);
+    const [number,setNumber]=useState(Math.floor(Math.random() * 5));
     const [reload,setReload]=useState(sessionStorage.getItem('checking'));
     const [text,setText]=useState(false);
     
