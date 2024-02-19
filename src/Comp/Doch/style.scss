@@ -7,17 +7,30 @@ body{
     height:0px;
 }
 #main-container-doch{
-	width:400vw;
+	position:absolute;
+	width:800vw;
 	height:100vh;
 	background-color: #2E3659;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 600;
 	display: flex;
+	top:0%;
+	left:0%;
+	// gap:10vw;
 	align-items: center;
-	justify-content: center;
+	// justify-content: center;
 	color:white;
 
 	#text{
-		font-size: 550px;
+		// position:absolute;
+		font-size: 34vw;
+	}
+
+	#custom{
+		// position: absolute;
+		height:100vh;
+		width:700vw;
+		background-color:rgba(0, 0, 0, 0.425) ;
+		color:white;
 	}
 }
