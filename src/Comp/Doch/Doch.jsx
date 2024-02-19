@@ -4,7 +4,7 @@ import "./style.css"
 export default function Doch(){
 	return(	
 		<motion.div
-		id="main-container"
+		id="main-container-doch"
 		>
 			<motion.div 
 			id="text"

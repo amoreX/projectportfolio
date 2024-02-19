@@ -1,9 +1,12 @@
-// import "./Calc.css"
+
+
 import {motion} from "framer-motion"
+import "./Calc.css"
 export default function Calc(){
 	return(
 		<motion.div
-		id="main-container"
+		id="main-container-Calc"
+		// style={{backgroundColor:"#6B5B7F"}}
 		>
 			<motion.div 
 			id="text"

@@ -56,7 +56,7 @@ export default function Landing(){
     });
 
     const theme1=[["50%","50%","50%","50%","100%","30%"],["25%","40%","40%","25%","35%","15%"],["0px","0px","0px","0px","0px","0px"],["0%","50%","0%","50%","0%","70%"],["0%","0%","25%","40%","65%","85%"]]
-    const theme2=[["50%","50%","50%","50%","100%","30%"],["25%","40%","40%","25%","35%","15%"],["20%","10%","10%","20%","10%","20%"],["0%","50%","0%","50%","0%","70%"],["0%","0%","25%","40%","65%","85%"]]
+    const theme2=[["50%","50%","50%","50%","100%","30%"],["25%","40%","40%","25%","35%","15%"],["30px","20px","20px","30px","20px","20px"],["0%","50%","0%","50%","0%","70%"],["0%","0%","25%","40%","65%","85%"]]
     const theme3=[["50%","50%","50%","50%","100%","30%"],["25%","40%","40%","25%","35%","15%"],["0px 0px 0px 60%","0px 50% 50% 0px","40%"," 0px 0px 0px 60%","0px 50% 0px 0px","50% 0px 0px 0px"],["0%","50%","0%","50%","0%","70%"],["0%","0%","25%","40%","65%","85%"]]
     const theme4=[["50%","75%","75%","15%","100%","30%"],["15%","15%","15%","15%","25%","15%"],["0px 0px 0px 0px","0px 0px 0px 0px","0px"," 0px 0px 0px 0px","0px 0px 0px 0px","0px 0px 0px 0px"],["0%","0%","25%","25%","0%","45%"],["0%","15%","30%","45%","60%","85%"]]
     const theme5=[["50%","75%","75%","15%","100%","30%"],["15%","15%","15%","15%","25%","15%"],["50%","50%","50%","50%","50%","50%"],["0%","0%","25%","25%","0%","45%"],["0%","15%","30%","45%","60%","85%"]]
@@ -136,8 +136,7 @@ export default function Landing(){
             zIndex:"4",
             height:"500px",
             width:"1000px",
-            scale:"2",
-            color:"black"
+            scale:"2"
         })
         setStyles2({
             opacity:0
@@ -193,6 +192,7 @@ export default function Landing(){
 
     }
     const handleclick3=()=>{
+        sessionStorage.setItem('checking', "weather");
         setStyles3({
             height:"500px",
             width:"1000px",
@@ -218,6 +218,7 @@ export default function Landing(){
     }
 
     const handleclick4=()=>{
+        sessionStorage.setItem('checking', "git");
         setText(true);
         setStyles4({
             height:"500px",
@@ -225,8 +226,24 @@ export default function Landing(){
             scale:"2",
             zIndex:"4"
         })
+        setStyles1({
+            opacity:0
+        })
+        setStyles2({
+            opacity:0
+        })
+        setStyles3({
+            opacity:0
+        })
+        setStyles5({
+            opacity:0
+        })
+        setStyles6({
+            opacity:0
+        })
     }
     const handleclick5=()=>{
+        sessionStorage.setItem('checking', "wpm");
         setText(true);
         setStyles5({
             height:"500px",
@@ -234,14 +251,45 @@ export default function Landing(){
             scale:"2",
             zIndex:"4"
         })
+        setStyles1({
+            opacity:0
+        })
+        setStyles2({
+            opacity:0
+        })
+        setStyles3({
+            opacity:0
+        })
+        setStyles4({
+            opacity:0
+        })
+        setStyles6({
+            opacity:0
+        })
     }
     const handleclick6=()=>{
+        sessionStorage.setItem('checking', "me");
         setText(true);
         setStyles6({
             height:"500px",
             width:"1000px",
             scale:"2",
             zIndex:"5",
+        })
+        setStyles1({
+            opacity:0
+        })
+        setStyles2({
+            opacity:0
+        })
+        setStyles3({
+            opacity:0
+        })
+        setStyles4({
+            opacity:0
+        })
+        setStyles5({
+            opacity:0
         })
     }
 
@@ -261,10 +309,34 @@ export default function Landing(){
             animate={{scale:1}}
              style={style2} onClick={()=>{handleclick2()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Calculator</div>
              </motion.div>
-            <div id="shape3" style={style3} onClick={()=>{handleclick3()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Weather</div></div>
-            <div id="shape4" style={style4} onClick={()=>{handleclick4()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>GIT</div></div>
-            <div id="shape5" style={style5} onClick={()=>{handleclick5()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>WPM</div></div>
-            <div id="shape6" style={style6} onClick={()=>{handleclick6()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Me</div></div>
+             <motion.div
+             id="shape3"
+            initial={{scale:reload=="weather"?"20":"1",zIndex:reload=="weather"?"5":"2"}}
+            transition={{type:"tween",ease:"easeInOut",duration:0.29}}
+            animate={{scale:1}}
+             style={style3} onClick={()=>{handleclick3()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Weather</div>
+             </motion.div>
+             <motion.div
+             id="shape4"
+            initial={{scale:reload=="git"?"20":"1",zIndex:reload=="git"?"5":"2"}}
+            transition={{type:"tween",ease:"easeInOut",duration:0.29}}
+            animate={{scale:1}}
+             style={style4} onClick={()=>{handleclick4()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>GIT</div>
+             </motion.div>
+             <motion.div
+             id="shape5"
+            initial={{scale:reload=="wpm"?"20":"1",zIndex:reload=="wpm"?"5":"2"}}
+            transition={{type:"tween",ease:"easeInOut",duration:0.29}}
+            animate={{scale:1}}
+             style={style5} onClick={()=>{handleclick5()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>WPM</div>
+             </motion.div>
+             <motion.div
+             id="shape6"
+            initial={{scale:reload=="me"?"20":"1",zIndex:reload=="me"?"5":"2"}}
+            transition={{type:"tween",ease:"easeInOut",duration:0.29}}
+            animate={{scale:1}}
+             style={style6} onClick={()=>{handleclick6()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Me</div>
+             </motion.div>
         </div>
     )
 }
