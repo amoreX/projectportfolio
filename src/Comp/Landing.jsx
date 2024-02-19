@@ -27,36 +27,47 @@ export default function Landing(){
         scale:reload=="calc"?"10":"1"
     });
     const [style3, setStyles3] = useState({
-        height: "0%",
-        width: "0%",
+        height: reload=="weather"?"100%":"0%",
+        width: reload=="weather"?"100%":"0%",
         borderRadius: "0%",
         top: "0%",
-        left: "0%"
+        left: "0%",
+        scale:reload=="weather"?"10":"1"
+        
     });
     const [style4, setStyles4] = useState({
-        height: "0%",
-        width: "0%",
+        height: reload=="git"?"100%":"0%",
+        width: reload=="git"?"100%":"0%",
         borderRadius: "0%",
         top: "0%",
-        left: "0%"
+        left: "0%",
+        scale:reload=="git"?"10":"1"
+
     });
     const [style5, setStyles5] = useState({
-        height: "0%",
-        width: "0%",
+        height: reload=="wpm"?"100%":"0%",
+        width: reload=="wpm"?"100%":"0%",
         borderRadius: "0%",
         top: "0%",
-        left: "0%"
+        left: "0%",
+        scale:reload=="wpm"?"10":"1",
+        zIndex: reload=="wpm"?"5":"4",
+
     });
     const [style6, setStyles6] = useState({
-        height: "0%",
-        width: "0%",
+        height: reload=="me"?"100%":"0%",
+        width: reload=="me"?"100%":"0%",
         borderRadius: "0%",
         top: "0%",
-        left: "0%"
+        left: "0%",
+        scale:reload=="me"?"10":"1",
+        zIndex: reload=="wpm"?"6":"4",
+
+
     });
 
-    const theme1=[["50%","50%","50%","50%","100%","30%"],["25%","40%","40%","25%","35%","15%"],["0px","0px","0px","0px","0px","0px"],["0%","50%","0%","50%","0%","70%"],["0%","0%","25%","40%","65%","85%"]]
-    const theme2=[["50%","50%","50%","50%","100%","30%"],["25%","40%","40%","25%","35%","15%"],["30px","20px","20px","30px","20px","20px"],["0%","50%","0%","50%","0%","70%"],["0%","0%","25%","40%","65%","85%"]]
+    const theme1=[["50%","50%","50%","50%","70%","30%"],["25%","40%","40%","25%","35%","35%"],["0px","0px","0px","0px","0px","0px"],["0%","50%","0%","50%","0%","70%"],["0%","0%","25%","40%","65%","65%"]]
+    const theme2=[["50%","50%","50%","50%","70%","30%"],["25%","40%","40%","25%","35%","35%"],["30px","20px","20px","30px","20px","20px"],["0%","50%","0%","50%","0%","70%"],["0%","0%","25%","40%","65%","65%"]]
     const theme3=[["50%","50%","50%","50%","100%","30%"],["25%","40%","40%","25%","35%","15%"],["0px 0px 0px 60%","0px 50% 50% 0px","40%"," 0px 0px 0px 60%","0px 50% 0px 0px","50% 0px 0px 0px"],["0%","50%","0%","50%","0%","70%"],["0%","0%","25%","40%","65%","85%"]]
     const theme4=[["50%","75%","75%","15%","100%","30%"],["15%","15%","15%","15%","25%","15%"],["0px 0px 0px 0px","0px 0px 0px 0px","0px"," 0px 0px 0px 0px","0px 0px 0px 0px","0px 0px 0px 0px"],["0%","0%","25%","25%","0%","45%"],["0%","15%","30%","45%","60%","85%"]]
     const theme5=[["50%","75%","75%","15%","100%","30%"],["15%","15%","15%","15%","25%","15%"],["50%","50%","50%","50%","50%","50%"],["0%","0%","25%","25%","0%","45%"],["0%","15%","30%","45%","60%","85%"]]
@@ -215,10 +226,14 @@ export default function Landing(){
             opacity:0
         })
         setText(true);
+        setTimeout(()=>{
+            navigate("/Weather");
+        },200);
     }
 
     const handleclick4=()=>{
         sessionStorage.setItem('checking', "git");
+        
         setText(true);
         setStyles4({
             height:"500px",
@@ -241,6 +256,9 @@ export default function Landing(){
         setStyles6({
             opacity:0
         })
+        setTimeout(()=>{
+            navigate("/Git");
+        },200);
     }
     const handleclick5=()=>{
         sessionStorage.setItem('checking', "wpm");
@@ -249,7 +267,6 @@ export default function Landing(){
             height:"500px",
             width:"1000px",
             scale:"2",
-            zIndex:"4"
         })
         setStyles1({
             opacity:0
@@ -266,6 +283,9 @@ export default function Landing(){
         setStyles6({
             opacity:0
         })
+        setTimeout(()=>{
+            navigate("/Wpm");
+        },200);
     }
     const handleclick6=()=>{
         sessionStorage.setItem('checking', "me");
@@ -291,6 +311,9 @@ export default function Landing(){
         setStyles5({
             opacity:0
         })
+        setTimeout(()=>{
+            navigate("/Me");
+        },200);
     }
 
     return(
@@ -309,6 +332,7 @@ export default function Landing(){
             animate={{scale:1}}
              style={style2} onClick={()=>{handleclick2()}}><div id="text" style={{fontSize:text==true?"0px":"300px"}}>Calculator</div>
              </motion.div>
+
              <motion.div
              id="shape3"
             initial={{scale:reload=="weather"?"20":"1",zIndex:reload=="weather"?"5":"2"}}

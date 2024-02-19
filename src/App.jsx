@@ -3,6 +3,10 @@ import { useNavigate,createBrowserRouter, RouterProvider } from 'react-router-do
 import Landing from "./Comp/Landingfr"
 import Doch from "./Comp/Doch/Doch"
 import Calc from "./Comp/Calc/Calc"
+import Weather from './Comp/Weather/Weather'
+import Git from './Comp/Git/git'
+import Wpm from './Comp/Wpm/Wpm'
+import Me from './Comp/Me/Me'
 import './App.css'
 
 
@@ -18,6 +22,22 @@ const router=createBrowserRouter([
   {
     path:"/Calc",
     element:<Calc />
+  },
+  {
+    path:"/Weather",
+    element:<Weather />
+  },
+  {
+    path:"/git",
+    element:<Git />
+  },
+  {
+    path:"/wpm",
+    element:<Wpm />
+  },
+  {
+    path:"/Me",
+    element:<Me />
   }
 
 ])

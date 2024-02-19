@@ -1,11 +1,10 @@
 
 import {motion} from "framer-motion"
-import Custom from "../Custom"
-import "./style.css"
-export default function Doch(){
+import "./Style.css"
+export default function Git(){
 	return(	
 		<motion.div
-		id="main-container-doch"
+		id="main-container-git"
 		>
 			<motion.div 
 			id="text"
@@ -23,10 +22,8 @@ export default function Doch(){
                 opacity:1
 			}}
 			>
-				DOCH
+				Git
 			</motion.div>
-		<Custom></Custom>
-			
 		</motion.div>
 	)
 }
