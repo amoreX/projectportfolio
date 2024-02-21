@@ -7,18 +7,53 @@ body{
     height:0px;
 }
 #main-container-me{
-	
+	position:absolute;
 	width:400vw;
 	height:100vh;
-	background-color: #3F5B8D;
+	background-color: #eec281;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 600;
 	display: flex;
+	top:0%;
+	left:0%;
 	align-items: center;
-	justify-content: center;
 	color:white;
 
 	#text{
-		font-size: 550px;
+		justify-content: center;
+		display: flex;
+		align-items: center;
+		height:100vh;
+		width:100vw;
+		// background-color: rgb(67, 67, 67);
+		// position:absolute;
+		font-size: 21vw;
+	}
+
+	#custom{
+		height:100vh;
+		width:300vw;
+		color:white;
+		background-color: pink;
+		display: flex;
+
+		#page-1{
+			background-color: green;
+			width:100vw;
+			height:100vh;
+		}
+
+		#page-2{
+			background-color: blue;
+			width: 100vw;
+			height:100vh;
+		}
+
+		#page-3{
+			background-color: cyan;
+			width: 100vw;
+			height:100vh;
+		}
+
 	}
 }

@@ -57,9 +57,8 @@ export default function Doch(){
 						}}
 						tranition={{
 							delay:0.2,
-							type:"tween",
-							ease:"easeInOut",
-							duration:0.58
+							duration:0.18,
+							type:"tween"
 						}}
 						animate={{
 							y:0

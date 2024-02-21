@@ -16,7 +16,6 @@ body{
     z-index: 2;
     transition:0.28s ease-in;
     cursor:pointer;
-
     #text{
         font-size:300px;
         opacity:0;
@@ -59,32 +58,32 @@ body{
 
     #shape1{
         position:absolute;
-        background-color: #2E3659;
+        background-color: #284b63;
         @include uwu();
     }
     #shape2{
         position:absolute;
-        background-color: #6B5B7F;
+        background-color: #88d18a;
         @include uwu();
     }
     #shape3{
         position:absolute;
-        background-color: #AA8BA3;
+        background-color: #ff5c95;
         @include uwu();
     }
     #shape4{
         position:absolute;
-        background-color: #CA757C;
+        background-color: #ffcdbc;
         @include uwu();
     }
     #shape5{
         position:absolute;
-        background-color: #363738;
+        background-color: #a070ff;
         @include uwu();
     }
     #shape6{
         position:absolute;
-        background-color:#3F5B8D;
+        background-color:#eec281;
         @include uwu();
     }
 
