@@ -5,6 +5,8 @@ import { useEffect } from "react"
 import "./style.css"
 export default function Doch(){
 
+	const title=["D","O","C","H"]
+
 	useEffect(()=>{
 		const handleWheel = (event) => {
 			if (event.deltaY !== 0) {
@@ -31,21 +33,39 @@ export default function Doch(){
 		>
 			<motion.div 
 			id="text"
-			initial={{
-				scale:0.5,
-				opacit:0
-			}}
-			transition={{
-				type:"tween",
-				ease:"easeOut",
-				duration:0.19
-			}}
-			animate={{
-				scale:1,
-                opacity:1
-			}}
+			// initial={{
+			// 	scale:0.5,
+			// 	opacit:0
+			// }}
+			// transition={{
+			// 	type:"tween",
+			// 	ease:"easeOut",
+			// 	duration:0.19
+			// }}
+			// animate={{
+			// 	scale:1,
+            //     opacity:1
+			// }}
 			>
-				DOCH
+				{title.map((letter,index)=>{
+					return(
+						<motion.div 
+						key={index}
+						initial={{
+							y:500*Math.pow(-1,index+1)
+
+						}}
+						tranition={{
+							delay:0.2,
+							type:"tween",
+							ease:"easeInOut",
+							duration:0.58
+						}}
+						animate={{
+							y:0
+						}}>{letter}</motion.div>
+					)
+				})}
 			</motion.div>
 		<Custom></Custom>
 			
