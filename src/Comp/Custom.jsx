@@ -10,9 +10,6 @@ export default function Custom(){
         id="custom"
         >
             <div id="page-1">
-                <div id="pictures">
-
-                </div>
                 <div id="text-div">
                     <div id="header">
                         <motion.div 
@@ -61,6 +58,9 @@ export default function Custom(){
                         </motion.div>
 
                     </div>
+                </div>
+                <div id="pictures">
+                        
                 </div>
             </div>
             <div id="page-2">
