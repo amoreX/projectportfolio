@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 body{
 	margin:0px;
+	font-family: "Josefin Sans", sans-serif;
 	// overflow: hidden;
 }
 ::-webkit-scrollbar{
@@ -11,8 +14,8 @@ body{
 	width:400vw;
 	height:100vh;
 	background-color: #284b63;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 600;
+	font-weight: 400;
+	font-style: normal;
 	display: flex;
 	top:0%;
 	left:0%;
@@ -23,7 +26,9 @@ body{
 		display: flex;
 		align-items: center;
 		height:100vh;
+		justify-content: center;
 		width:100vw;
+		cursor: default;
 		// background-color: rgb(67, 67, 67);
 		// position:absolute;
 		font-size: 34vw;
@@ -33,13 +38,81 @@ body{
 		height:100vh;
 		width:300vw;
 		color:white;
-		background-color: pink;
+		// background-color: pink;
 		display: flex;
 
 		#page-1{
-			background-color: green;
+			// background-color: green;
 			width:100vw;
 			height:100vh;
+			position:relative;
+
+			#text-div{
+
+				position:absolute;
+				bottom:15%;
+				left:10%;
+				display: flex;
+				flex-direction: column;
+				// background-color: rgb(154, 154, 154);
+				width:20vw;
+				min-width: 200px;
+				gap:10px;
+				height:15vh;
+				// justify-content: flex-start;
+
+				#header{
+					position:relative;
+					width:20vw;
+					height:6vh;
+					min-width: 200px;
+					overflow: hidden;
+					#header-cover{
+						position: absolute;
+						width:17vw;
+						height: inherit;
+						// background-color: rgb(57, 57, 57);
+						background-color: #11212a;
+					}
+					#header-text{
+						width: inherit;
+						height: 100%;
+						display: flex;
+						align-items: center;
+						position: absolute;
+						margin-left: 20px;
+						font-size: 1.7vw;
+
+					}
+				}
+				#body{
+					position: relative;
+					width: inherit;
+					height: 100%;
+					overflow: hidden;
+					// background-color: black;
+					#body-cover{
+						position: absolute;
+						width: inherit;
+						height: inherit;
+						// background-color: rgb(57, 57, 57);
+						background-color: #11212a;
+
+					}
+					#body-text{
+						position: absolute;
+						width: inherit;
+						font-size: 1.1vw;
+						height: inherit;
+						// background-color: blue;
+
+					}
+				}
+
+			}
+
+
+
 		}
 
 		#page-2{
@@ -56,3 +129,4 @@ body{
 
 	}
 }
+

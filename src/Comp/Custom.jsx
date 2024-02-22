@@ -3,42 +3,65 @@ import {motion,useInView,useAnimation} from 'framer-motion'
 
 export default function Custom(){
 
-    const ref = useRef(null);
-    const isInview = useInView(ref,{once:true});
-    useEffect(()=>{
-        console.log("it came");
-    },[isInview]);
-
-
-    const handleScroll=()=>{
-        // console.log(window.scrollX);
-        // console.log(window.innerWidth);
-    };
-
-    //put framer animate and initial in constraints and inside handleScroll just 
-    //update those conditions based on to which point the user has scrolleld
-    //watch the other nigga to learn how to update or start animation when
-    //condition is met 
-
-
-    useEffect(() => {
-        // Add scroll event listener when the component mounts
-        window.addEventListener('scroll', handleScroll);
-    
-        // Remove scroll event listener when the component unmounts
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
 
 
     return(
         <motion.div
-        ref={ref}
         id="custom"
         >
             <div id="page-1">
-                page1
+                <div id="pictures">
+
+                </div>
+                <div id="text-div">
+                    <div id="header">
+                        <motion.div 
+                            id="header-cover"
+                        variants={{
+                            hidden:{x:0},
+                            visible:{x:300}
+                        }}
+                        transition={{type:"tween",duration:0.56,delay:0.1,ease:"easeInOut"}}
+                        initial="hidden"
+                        whileInView="visible">
+                        </motion.div>
+                        <motion.div 
+                        id="header-text"
+                        variants={{
+                            hidden:{y:25,opacity:0},
+                            visible:{y:0,opacity:1}
+                        }}
+                        transition={{type:"tween",duration:0.56,delay:0.1,ease:"easeInOut"}}
+                        initial="hidden"
+                        whileInView="visible"
+                        >
+                        About DOCH</motion.div>
+                    </div>
+                    <div id="body">
+                        <motion.div
+                        id="body-cover"
+                            variants={{
+                            hidden:{x:0},
+                            visible:{x:300}
+                        }}
+                        transition={{type:"tween",duration:0.56,delay:0.38,ease:"easeInOut"}}
+                        initial="hidden"
+                        whileInView="visible">
+                        </motion.div>
+                        <motion.div
+                        id="body-text"
+                        variants={{
+                            hidden:{y:67,opacity:0},
+                            visible:{y:0,opacity:1}
+                        }}
+                        transition={{type:"tween",duration:0.56,delay:0.65,ease:"easeInOut"}}
+                        initial="hidden"
+                        whileInView="visible">
+                            Doch is a specimen of UI design that helps in gathering latest happenings of the world around us.
+                        </motion.div>
+
+                    </div>
+                </div>
             </div>
             <div id="page-2">
                 page2
