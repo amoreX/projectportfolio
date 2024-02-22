@@ -7,7 +7,7 @@ export default function Landing(){
 
     const navigate= useNavigate();
     const [number,setNumber]=useState(Math.floor(Math.random() * 5));
-    const [reload,setReload]=useState(sessionStorage.getItem('checking'));
+    const [reload,setReload]=useState(localStorage.getItem('checking'));
     const [text,setText]=useState(false);
     
     const [style1, setStyles1] = useState({
@@ -79,6 +79,7 @@ export default function Landing(){
     const left=[theme1[4],theme2[4],theme3[4],theme4[4],theme5[4]];
 
     useEffect(() => {
+
         const intervalId = setInterval(() => {
             setNumber((prevNumber) => {
                 let p;
@@ -93,7 +94,10 @@ export default function Landing(){
     
         }, 3000);
         return () => {
-            clearInterval(intervalId);
+            setTimeout(()=>{
+                clearInterval(intervalId);
+
+            },3000)
         };
     }, []);
     
@@ -143,6 +147,8 @@ export default function Landing(){
     }, [number]);
     
     const handleclick1=()=>{
+        localStorage.setItem('checking', "doch");
+
         setStyles1({
             zIndex:"4",
             height:"500px",
@@ -166,13 +172,14 @@ export default function Landing(){
         })
         setText(true);
 
-        sessionStorage.setItem('checking', "doch");
 
         setTimeout(()=>{
             navigate("/Doch");
         },200);
     }
     const handleclick2=()=>{
+        localStorage.setItem('checking', "calc");
+
         setText(true);
         setStyles2({
             zIndex:"4",
@@ -196,14 +203,13 @@ export default function Landing(){
             opacity:0
         })
 
-        sessionStorage.setItem('checking', "calc");
             setTimeout(()=>{
                 navigate("/Calc");
             },200);
 
     }
     const handleclick3=()=>{
-        sessionStorage.setItem('checking', "weather");
+        localStorage.setItem('checking', "weather");
         setStyles3({
             height:"500px",
             width:"1000px",
@@ -232,7 +238,7 @@ export default function Landing(){
     }
 
     const handleclick4=()=>{
-        sessionStorage.setItem('checking', "git");
+        localStorage.setItem('checking', "git");
         
         setText(true);
         setStyles4({
@@ -261,7 +267,7 @@ export default function Landing(){
         },200);
     }
     const handleclick5=()=>{
-        sessionStorage.setItem('checking', "wpm");
+        localStorage.setItem('checking', "wpm");
         setText(true);
         setStyles5({
             height:"500px",
@@ -288,7 +294,7 @@ export default function Landing(){
         },200);
     }
     const handleclick6=()=>{
-        sessionStorage.setItem('checking', "me");
+        localStorage.setItem('checking', "me");
         setText(true);
         setStyles6({
             height:"500px",
