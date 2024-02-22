@@ -204,6 +204,36 @@ body{
 				}
 			}
 
+			#page2-text{
+				position:absolute;
+				top:10%;
+					
+
+				#header{
+					position:relative;
+					width:15vw;
+					height:6vh;
+					min-width: 200px;
+					overflow: hidden;
+					margin-left: 5vw;
+					// background-color: black;
+					font-size: 2rem;
+
+					#header-cover{
+						position:absolute;
+						width:inherit;
+						height:inherit;
+						background-color: #11212a;
+					}
+				}
+
+				#text{
+					position:relative;
+				}
+
+
+			}
+
 		}
 
 

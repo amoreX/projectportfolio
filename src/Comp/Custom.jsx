@@ -2,7 +2,7 @@ import {motion} from 'framer-motion'
 
 export default function Custom(){
 
-
+    const li=["sass","css","html","ejs","nodejs","express","js"];
 
     return(
         <motion.div
@@ -105,7 +105,49 @@ export default function Custom(){
 
                 <div id="page2-text">
 
+                    <div id="header">
+
+                        <motion.div 
+                            id="header-cover"
+                        variants={{
+                            hidden:{x:0},
+                            visible:{x:300}
+                        }}
+                        transition={{type:"tween",duration:0.56,delay:0.1,ease:"easeInOut"}}
+                        initial="hidden"
+                        whileInView="visible">
+                        </motion.div>
+
+                        <motion.div 
+                        id="header-text"
+                        variants={{
+                            hidden:{y:25,opacity:0},
+                            visible:{y:0,opacity:1}
+                        }}
+                        transition={{type:"tween",duration:0.56,delay:0.1,ease:"easeInOut"}}
+                        initial="hidden"
+                        whileInView="visible"
+                        >
+                        My Homies </motion.div>
+
+                    </div>
                     
+                    <div id="text">
+                        {li.map((language,index)=>{
+                            return(
+                                <div id="each-lang">
+                                    <motion.div
+                                    id="lang-cover">
+
+                                    </motion.div>
+                                    <motion.div
+                                    id="lang-text">
+                                        {language}
+                                    </motion.div>
+                                </div>
+                            )
+                        })}
+                    </div>
 
                 </div>
             </div>

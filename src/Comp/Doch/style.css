@@ -165,4 +165,26 @@ body {
 #main-container-doch #custom #page-2 #video video {
   width: 70vw;
   height: auto;
+}
+#main-container-doch #custom #page-2 #page2-text {
+  position: absolute;
+  top: 10%;
+}
+#main-container-doch #custom #page-2 #page2-text #header {
+  position: relative;
+  width: 15vw;
+  height: 6vh;
+  min-width: 200px;
+  overflow: hidden;
+  margin-left: 5vw;
+  font-size: 2rem;
+}
+#main-container-doch #custom #page-2 #page2-text #header #header-cover {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: #11212a;
+}
+#main-container-doch #custom #page-2 #page2-text #text {
+  position: relative;
 }/*# sourceMappingURL=style.css.map */
