@@ -33,18 +33,18 @@ export default function Doch(){
 			<motion.div 
 			id="text"
 			>
-				<motion.div 
+				{/* <motion.div 
 				id="text-cover"
 				initial={{}}
 				transition={{type:"tween",delay:0.2,duration:0.38,ease:"easeInOut"}}
-				animate={{width:"0vw"}}></motion.div>
+				animate={{width:"0vw"}}></motion.div> */}
 				<motion.div
 				id="text-body">
 					{title.map((letter,index)=>{
 						return(
 							<motion.div
 							initial={{scale:0.6}}
-							transition={{type:"tween",duration:0.38,delay:index==0 || index==3? 0.25 : 0.45}}
+							transition={{type:"tween",duration:0.38,delay:0.05+index*0.1}}
 							animate={{scale:1}}
 							>
 								{letter}
