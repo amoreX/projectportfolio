@@ -66,9 +66,6 @@ export default function Custom(){
             <div id="page-2">
                 page2
             </div>
-            <div id="page-3">
-                page3
-            </div>
         </motion.div>
     )
 }
