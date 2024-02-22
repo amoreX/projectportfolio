@@ -31,11 +31,15 @@ body{
 		justify-content: center;
 		width:100vw;
 		cursor: default;
-		font-size: 30vw;
+		font-size: 27vw;
+		// line-height: 25px;
 		#text-cover-original{
 			position:absolute;
 			width:90vw;
 			height:90vh;
+			display: flex;
+			align-items: center;
+			justify-content: center; 
 			overflow: hidden;
 			z-index: 4;
 			#text-cover{
@@ -43,7 +47,7 @@ body{
 				height:90vh;
 				background-color:#11212a ;
 			}
-
+			
 		}
 		#text-body{
 			position: absolute;
@@ -132,14 +136,74 @@ body{
 
 			}
 
+			#pictures{
+				
+				#pic-1{
+					position:absolute;
+					right:10%;
+					top:5%;
+					width:50vw;
+					// background-image: url("/Assets/doch1.png");
+					aspect-ratio: 1.7;
+					z-index: 2;
+					transition:0.38s ease-in-out;
+					img{
+						width:inherit;
+						aspect-ratio: inherit;
+
+					}
+					&:hover{
+						scale:1.05;
+						&:hover ~ #pic-2{
+							transform:translateY(300px);
+						}
+					}
+				}
+				#pic-2{
+					position:absolute;
+					z-index: 2;
+					right:25%;
+					// top:45%;
+					width:40vw;
+					// background-image: url("/Assets/doch1.png");
+					aspect-ratio: 1.7;
+					transition:0.38s ease-in-out;
+
+					img{
+						width:inherit;
+						aspect-ratio: inherit;
+					}
+					&:hover{
+						scale:1.5;
+						transform:translateY(-40%);
+
+
+					}
+				}
+			}
+
 
 
 		}
 
 		#page-2{
-			background-color: blue;
+			// background-color: blue;
 			width: 100vw;
 			height:100vh;
+
+			#video{
+				position:absolute;
+				width:70vw;
+				height: auto;
+				right:1%;
+				top:10%;
+				
+				video{
+					width:70vw;
+					height: auto;
+				}
+			}
+
 		}
 
 
