@@ -32,13 +32,18 @@ body{
 		width:100vw;
 		cursor: default;
 		font-size: 30vw;
-
-		#text-cover{
-			position: absolute;
+		#text-cover-original{
+			position:absolute;
 			width:90vw;
 			height:90vh;
+			overflow: hidden;
 			z-index: 4;
-			background-color:#11212a ;
+			#text-cover{
+				width:90vw;
+				height:90vh;
+				background-color:#11212a ;
+			}
+
 		}
 		#text-body{
 			position: absolute;

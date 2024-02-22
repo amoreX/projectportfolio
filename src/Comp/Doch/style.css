@@ -33,11 +33,16 @@ body {
   cursor: default;
   font-size: 30vw;
 }
-#main-container-doch #text #text-cover {
+#main-container-doch #text #text-cover-original {
   position: absolute;
   width: 90vw;
   height: 90vh;
+  overflow: hidden;
   z-index: 4;
+}
+#main-container-doch #text #text-cover-original #text-cover {
+  width: 90vw;
+  height: 90vh;
   background-color: #11212a;
 }
 #main-container-doch #text #text-body {
