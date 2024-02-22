@@ -23,15 +23,31 @@ body{
 	color:white;
 
 	#text{
+		overflow: hidden;
 		display: flex;
 		align-items: center;
 		height:100vh;
+		position: relative;
 		justify-content: center;
 		width:100vw;
 		cursor: default;
-		// background-color: rgb(67, 67, 67);
-		// position:absolute;
-		font-size: 34vw;
+		font-size: 30vw;
+
+		#text-cover{
+			position: absolute;
+			width:90vw;
+			height:90vh;
+			z-index: 4;
+			background-color:#11212a ;
+		}
+		#text-body{
+			position: absolute;
+			z-index: 3;
+			display: flex;
+			align-items: center;
+
+
+		}
 	}
 
 	#custom{

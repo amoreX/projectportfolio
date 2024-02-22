@@ -23,13 +23,28 @@ body {
   color: white;
 }
 #main-container-doch #text {
+  overflow: hidden;
   display: flex;
   align-items: center;
   height: 100vh;
+  position: relative;
   justify-content: center;
   width: 100vw;
   cursor: default;
-  font-size: 34vw;
+  font-size: 30vw;
+}
+#main-container-doch #text #text-cover {
+  position: absolute;
+  width: 90vw;
+  height: 90vh;
+  z-index: 4;
+  background-color: #11212a;
+}
+#main-container-doch #text #text-body {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
 }
 #main-container-doch #custom {
   height: 100vh;

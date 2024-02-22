@@ -6,7 +6,6 @@ import "./style.css"
 export default function Doch(){
 
 	const title=["D","O","C","H"]
-
 	useEffect(()=>{
 		const handleWheel = (event) => {
 			if (event.deltaY !== 0) {
@@ -33,38 +32,26 @@ export default function Doch(){
 		>
 			<motion.div 
 			id="text"
-			// initial={{
-			// 	scale:0.5,
-			// 	opacit:0
-			// }}
-			// transition={{
-			// 	type:"tween",
-			// 	ease:"easeOut",
-			// 	duration:0.19
-			// }}
-			// animate={{
-			// 	scale:1,
-            //     opacity:1
-			// }}
 			>
-				{title.map((letter,index)=>{
-					return(
-						<motion.div 
-						key={index}
-						initial={{
-							y:500*Math.pow(-1,index+1)
-
-						}}
-						tranition={{
-							delay:0.2,
-							duration:0.18,
-							type:"tween"
-						}}
-						animate={{
-							y:0
-						}}>{letter}</motion.div>
-					)
-				})}
+				<motion.div 
+				id="text-cover"
+				initial={{}}
+				transition={{type:"tween",delay:0.2,duration:0.38,ease:"easeInOut"}}
+				animate={{width:"0vw"}}></motion.div>
+				<motion.div
+				id="text-body">
+					{title.map((letter,index)=>{
+						return(
+							<motion.div
+							initial={{scale:0.6}}
+							transition={{type:"tween",duration:0.38,delay:index==0 || index==3? 0.25 : 0.45}}
+							animate={{scale:1}}
+							>
+								{letter}
+							</motion.div>
+						)
+					})}
+				</motion.div>
 			</motion.div>
 		<Custom></Custom>
 			
