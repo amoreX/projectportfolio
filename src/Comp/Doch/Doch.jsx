@@ -2,6 +2,7 @@
 import {motion} from "framer-motion"
 import Custom from "../Custom"
 import { useEffect } from "react"
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import "./style.css"
 export default function Doch(){
 	const propstosend={pic1:"/Assets/doch1.png",pic2:"/Assets/doch2.png",about:"About DOCH ",desc:"                            Doch is a specimen of UI design that helps in gathering latest happenings of the world around us.",vid:"/Assets/dochvid.mp4",homielist:["Sass","Css","Html","Ejs","NodeJs","Express","Js"] ,bgcolor:"#11212a",link:"https://newslite.onrender.com"};
@@ -13,7 +14,7 @@ export default function Doch(){
 			  event.preventDefault();
 			  window.scrollBy({
 				left: event.deltaY * 5,
-				// behavior:"smooth",
+				behavior:"smooth",
 			  });
 			}
 		};
@@ -28,6 +29,7 @@ export default function Doch(){
 
 	},[]);
 	return(	
+		<ReactLenis options={{orientation:"horizontal"}} root>
 		<motion.div
 		id="main-container-doch"
 		>
@@ -62,5 +64,6 @@ export default function Doch(){
 		<Custom props={propstosend}></Custom>
 			
 		</motion.div>
+		</ReactLenis>
 	)
 }
