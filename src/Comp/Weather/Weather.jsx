@@ -4,7 +4,7 @@ import Custom from "../Custom"
 import { useEffect } from "react"
 import "./Style.css"
 export default function Weather(){
-	const propstosend={pic1:"/Assets/weather1.png",pic2:"/Assets/weather2.png",about:"About Weather ",desc:"Weather is a site to give a detailed review of the weather of the user's location or any other location as per the user's choice in an impressive UI.",vid:"/Assets/weathervid.mp4",homielist:["Sass","Css","React","Ejs","NodeJs","Express","Js"] ,bgcolor:"#ae3a63"};
+	const propstosend={pic1:"/Assets/weather1.png",pic2:"/Assets/weather2.png",about:"About Weather ",desc:"Weather is a site to give a detailed review of the weather of the user's location or any other location as per the user's choice in an impressive UI.",vid:"/Assets/weathervid.mp4",homielist:["Sass","Css","React","Ejs","NodeJs","Express","Js"] ,bgcolor:"#ae3a63",link:"https://weather-app-taupe-sigma.vercel.app"};
 	const title=["W","E","A","T","H","E","R"]
 
 	useEffect(()=>{

@@ -263,6 +263,16 @@ body{
 				top:2%;
 				cursor:pointer;
 			}
+			#git{
+				position: absolute;
+				right: 0.5%;
+				bottom:2%;
+				cursor:pointer;
+				transition:0.27s ease-in-out;
+				&:hover{
+					scale:1.05;
+				}
+			}
 
 		}
 

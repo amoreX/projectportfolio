@@ -4,7 +4,7 @@ import Custom from "../Custom"
 import { useEffect } from "react"
 import "./Style.css"
 export default function Wpm(){
-	const propstosend={pic1:"/Assets/wpm1.png",pic2:"/Assets/wpm2.png",about:"About WPM ",desc:"WPM is a typing speedo-meter helping users understand their typing speed and it comes pre-built with 3 unique themes .",vid:"/Assets/wpmvid.mp4",homielist:["Sass","Css","React","Js"] ,bgcolor:"#6243a0"};
+	const propstosend={pic1:"/Assets/wpm1.png",pic2:"/Assets/wpm2.png",about:"About WPM ",desc:"WPM is a typing speedo-meter helping users understand their typing speed and it comes pre-built with 3 unique themes .",vid:"/Assets/wpmvid.mp4",homielist:["Sass","Css","React","Js"] ,bgcolor:"#6243a0",link:"https://wpmeter.vercel.app"};
 
 	const title=["W","P","M"]
 	useEffect(()=>{

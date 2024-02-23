@@ -4,7 +4,7 @@ import Custom from "../Custom"
 import { useEffect } from "react"
 import "./Style.css"
 export default function Git(){
-	const propstosend={pic1:"/Assets/git1.png",pic2:"/Assets/git2.png",about:"About GetiItDone ",desc:"Get It Done is a user-authenticated task manager helping users keep track of their task and it comes prebuilt with satisfying themes.",vid:"/Assets/gitvid.mp4",homielist:["Sass","Css","NextJs","MongoDB","Js"] ,bgcolor:"#b18e83"};
+	const propstosend={pic1:"/Assets/git1.png",pic2:"/Assets/git2.png",about:"About GetiItDone ",desc:"Get It Done is a user-authenticated task manager helping users keep track of their task and it comes prebuilt with satisfying themes.",vid:"/Assets/gitvid.mp4",homielist:["Sass","Css","NextJs","MongoDB","Js"] ,bgcolor:"#b18e83",link:"https://getitdone-theta.vercel.app"};
 	const title=["G","e","t","I","t","D","o","n","e"]
 	useEffect(()=>{
 		const handleWheel = (event) => {

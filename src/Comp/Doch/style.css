@@ -209,4 +209,14 @@ body {
   right: 1%;
   top: 2%;
   cursor: pointer;
+}
+#main-container-doch #custom #page-2 #git {
+  position: absolute;
+  right: 0.5%;
+  bottom: 2%;
+  cursor: pointer;
+  transition: 0.27s ease-in-out;
+}
+#main-container-doch #custom #page-2 #git:hover {
+  scale: 1.05;
 }/*# sourceMappingURL=style.css.map */

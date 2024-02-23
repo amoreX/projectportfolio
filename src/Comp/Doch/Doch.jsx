@@ -4,7 +4,7 @@ import Custom from "../Custom"
 import { useEffect } from "react"
 import "./style.css"
 export default function Doch(){
-	const propstosend={pic1:"/Assets/doch1.png",pic2:"/Assets/doch2.png",about:"About DOCH ",desc:"                            Doch is a specimen of UI design that helps in gathering latest happenings of the world around us.",vid:"/Assets/dochvid.mp4",homielist:["Sass","Css","Html","Ejs","NodeJs","Express","Js"] ,bgcolor:"#11212a"};
+	const propstosend={pic1:"/Assets/doch1.png",pic2:"/Assets/doch2.png",about:"About DOCH ",desc:"                            Doch is a specimen of UI design that helps in gathering latest happenings of the world around us.",vid:"/Assets/dochvid.mp4",homielist:["Sass","Css","Html","Ejs","NodeJs","Express","Js"] ,bgcolor:"#11212a",link:"https://newslite.onrender.com"};
 	// const title=["G","e","t","I","t","D","o","n","e"]
 	const title=["D","O","C","H"]
 	useEffect(()=>{
