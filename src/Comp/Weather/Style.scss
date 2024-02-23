@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 body{
 	margin:0px;
+	font-family: "Josefin Sans", sans-serif;
 	// overflow: hidden;
 }
 ::-webkit-scrollbar{
@@ -8,11 +11,12 @@ body{
 }
 #main-container-weather{
 	position:absolute;
-	width:400vw;
+	width:300vw;
 	height:100vh;
 	background-color: #ff5c95;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 600;
+	// background-color: #ae3a63;
+	font-weight: 400;
+	font-style: normal;
 	display: flex;
 	top:0%;
 	left:0%;
@@ -20,39 +24,249 @@ body{
 	color:white;
 
 	#text{
+		overflow: hidden;
 		display: flex;
 		align-items: center;
 		height:100vh;
+		position: relative;
+		justify-content: center;
 		width:100vw;
-		// background-color: rgb(67, 67, 67);
-		// position:absolute;
-		font-size: 20vw;
+		cursor: default;
+		font-size: 17vw;
+		// line-height: 25px;
+		#text-cover-original{
+			position:absolute;
+			width:90vw;
+			height:90vh;
+			display: flex;
+			align-items: center;
+			justify-content: center; 
+			overflow: hidden;
+			z-index: 4;
+			#text-cover{
+				width:90vw;
+				height:70vh;
+				background-color:#ae3a63 ;
+			}
+			
+		}
+		#text-body{
+			position: absolute;
+			z-index: 3;
+			display: flex;
+			align-items: center;
+
+
+		}
 	}
 
 	#custom{
 		height:100vh;
-		width:300vw;
+		width:200vw;
 		color:white;
-		background-color: pink;
+		// background-color: pink;
 		display: flex;
 
 		#page-1{
-			background-color: green;
+			// background-color: green;
 			width:100vw;
 			height:100vh;
+			position:relative;
+
+			#text-div{
+
+				position:absolute;
+				bottom:15%;
+				left:10%;
+				display: flex;
+				flex-direction: column;
+				// background-color: rgb(154, 154, 154);
+				width:20vw;
+				min-width: 200px;
+				gap:10px;
+				height:15vh;
+				// justify-content: flex-start;
+
+				#header{
+					position:relative;
+					width:20vw;
+					height:6vh;
+					min-width: 200px;
+					overflow: hidden;
+					#header-cover{
+						position: absolute;
+						width:17vw;
+						height: inherit;
+						// background-color: rgb(57, 57, 57);
+						// background-color: #11212a;
+					}
+					#header-text{
+						width: inherit;
+						height: 100%;
+						display: flex;
+						align-items: center;
+						position: absolute;
+						margin-left: 20px;
+						font-size: 1.7vw;
+
+					}
+				}
+				#body{
+					position: relative;
+					width: inherit;
+					height: 100%;
+					overflow: hidden;
+					// background-color: black;
+					#body-cover{
+						position: absolute;
+						width: inherit;
+						height: inherit;
+						// background-color: rgb(57, 57, 57);
+						// background-color: #11212a;
+
+					}
+					#body-text{
+						position: absolute;
+						width: inherit;
+						font-size: 1.1vw;
+						height: inherit;
+						// background-color: blue;
+
+					}
+				}
+
+			}
+
+			#pictures{
+				
+				#pic-1{
+					position:absolute;
+					right:10%;
+					top:5%;
+					width:50vw;
+					// background-image: url("/Assets/doch1.png");
+					aspect-ratio: 1.7;
+					z-index: 2;
+					transition:0.38s ease-in-out;
+					img{
+						width:inherit;
+						aspect-ratio: inherit;
+
+					}
+					&:hover{
+						scale:1.05;
+						&:hover ~ #pic-2{
+							transform:translateY(300px);
+						}
+					}
+				}
+				#pic-2{
+					position:absolute;
+					z-index: 2;
+					right:25%;
+					// top:45%;
+					width:40vw;
+					// background-image: url("/Assets/doch1.png");
+					aspect-ratio: 1.7;
+					transition:0.38s ease-in-out;
+
+					img{
+						width:inherit;
+						aspect-ratio: inherit;
+					}
+					&:hover{
+						scale:1.5;
+						transform:translateY(-40%);
+
+
+					}
+				}
+			}
+
+
+
 		}
 
 		#page-2{
-			background-color: blue;
+			// background-color: blue;
 			width: 100vw;
 			height:100vh;
+
+			#video{
+				position:absolute;
+				width:70vw;
+				height: auto;
+				right:1%;
+				top:10%;
+				
+				video{
+					width:70vw;
+					height: auto;
+				}
+			}
+
+			#page2-text{
+				position:absolute;
+				top:10%;
+					
+
+				#header{
+					position:relative;
+					width:15vw;
+					height:5vh;
+					min-width: 200px;
+					overflow: hidden;
+					margin-left: 5vw;
+					// background-color: black;
+					font-size: 2rem;
+
+					#header-cover{
+						position:absolute;
+						width:inherit;
+						height:inherit;
+						// background-color: #11212a;
+					}
+				}
+				
+				
+
+					
+					#text{
+						position:absolute;
+						height:fit-content;
+						width:fit-content;
+						// background-color: red;
+						display: flex;
+						margin-top: 10px;
+						margin-left: 6vw;
+						gap:5px;
+						flex-direction: column;
+						font-size: 2rem;
+						overflow: hidden;
+						#each-lang{
+							position:relative;
+							padding-inline: 5px;
+							#lang-cover{
+								position:absolute;
+								
+								// background-color: #11212a;
+								height: 33px;
+							}
+						}
+					}
+
+				
+			}
+			#back{
+				position: absolute;
+				right: 1%;
+				top:2%;
+				cursor:pointer;
+			}
+
 		}
 
-		#page-3{
-			background-color: cyan;
-			width: 100vw;
-			height:100vh;
-		}
 
 	}
 }
+

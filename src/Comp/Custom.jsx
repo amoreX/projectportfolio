@@ -25,7 +25,8 @@ export default function Custom(props){
         </svg>
         );
     const handlecross=()=>{
-        navigate("/");
+        // navigate("/");
+        history.back();
     }
     return(
         <motion.div
@@ -136,7 +137,8 @@ export default function Custom(props){
                             id="header-cover"
                         variants={{
                             hidden:{x:0},
-                            visible:{x:300}
+                            visible:{x:300,
+                            visibility:"hidden"}
                         }}
                         style={{backgroundColor:props.props.bgcolor}}
                         transition={{type:"tween",duration:0.56,delay:0.2,ease:"easeInOut"}}

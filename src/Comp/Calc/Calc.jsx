@@ -4,7 +4,7 @@ import Custom from "../Custom"
 import { useEffect } from "react"
 import "./Calc.css"
 export default function Calc(){
-	const propstosend={pic1:"/Assets/doch1.png",pic2:"/Assets/doch2.png",about:"About DOCH ",desc:"                            Doch is a specimen of UI design that helps in gathering latest happenings of the world around us.",vid:"/Assets/dochvid.mp4",homielist:["sass","css","html","ejs","nodejs","express","js"] ,bgcolor:"#11212a"};
+	const propstosend={pic1:"/Assets/calc1.png",pic2:"/Assets/calc2.png",about:"About Catculator ",desc:"Catculator is a fun calculator with satisfying click sounds  and a cute eye pleasing UI.",vid:"/Assets/calc.mp4",homielist:["Sass","Css","React","Js"] ,bgcolor:"#4b754d"};
 
 
 	const title=["C","A","L","C","U","L","A","T","O","R"]
