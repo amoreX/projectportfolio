@@ -165,7 +165,7 @@ export default function Custom(props){
                         {props.props.homielist.map((language,index)=>{
                             return(
                                 <div id="each-lang">
-                                    <motion.div
+                                    {/* <motion.div
                                     id="lang-cover"
                                     variants={{
                                         hidden:{x:0},
@@ -176,7 +176,7 @@ export default function Custom(props){
                                     whileInView="visible"
                                     style={{width:`${language.length*17}px`,backgroundColor:props.props.bgcolor}}>
 
-                                    </motion.div>
+                                    </motion.div> */}
                                     <motion.div
                                     id="lang-text"
                                     variants={{
