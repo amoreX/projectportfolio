@@ -27,26 +27,4 @@ body {
   height: 100vh;
   width: 100vw;
   font-size: 21vw;
-}
-#main-container-me #custom {
-  height: 100vh;
-  width: 300vw;
-  color: white;
-  background-color: pink;
-  display: flex;
-}
-#main-container-me #custom #page-1 {
-  background-color: green;
-  width: 100vw;
-  height: 100vh;
-}
-#main-container-me #custom #page-2 {
-  background-color: blue;
-  width: 100vw;
-  height: 100vh;
-}
-#main-container-me #custom #page-3 {
-  background-color: cyan;
-  width: 100vw;
-  height: 100vh;
 }/*# sourceMappingURL=Style.css.map */

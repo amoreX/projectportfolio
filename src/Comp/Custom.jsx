@@ -127,20 +127,28 @@ export default function Custom(props){
             </div>
             <div id="page-2">
 
-                {/* <motion.div
+                <motion.div
                 id="video"
                 variants={{
                     hidden:{top:"-70%",opacity:0},
                     visible:{top:"10%",opacity:1},
                 }}
                 transition={{type:"tween",duration:0.56,delay:0.65,ease:"easeInOut"}}
-                initial="hidden"
+                initial="visible"
                 whileInView="visible"
                 >
-                     <video   autoPlay loop muted>
+                     <motion.video  
+                     variants={{
+                        hidden:{top:"-70%",opacity:0},
+                        visible:{top:"10%",opacity:1},
+                    }}
+                    transition={{type:"tween",duration:0.56,delay:0.65,ease:"easeInOut"}}
+                    initial="hidden"
+                    whileInView="visible"
+                     style={{minWidth:"200px",minHeight:"200px"}} autoPlay loop muted>
                         <source src={props.props.vid} type="video/mp4" />
-                    </video>
-                </motion.div> */}
+                    </motion.video>
+                </motion.div>
 
                 <div id="page2-text">
 
@@ -214,6 +222,7 @@ export default function Custom(props){
                 <div id="back" onClick={()=>{handlecross()}}>
                         {cross}
                 </div>
+                
                 <div id="git"
                 onClick={()=>{gitclick()}}>
                         {git}

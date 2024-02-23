@@ -1,11 +1,9 @@
 
 import {motion} from "framer-motion"
-import Custom from "../Custom"
 import { useEffect } from "react"
 import "./Style.css"
 export default function Me(){
 
-	const title=["A","b","o","u","t","M","e"]
 
 	useEffect(()=>{
 		const handleWheel = (event) => {
@@ -31,42 +29,7 @@ export default function Me(){
 		<motion.div
 		id="main-container-me"
 		>
-			<motion.div 
-			id="text"
-			// initial={{
-			// 	scale:0.5,
-			// 	opacit:0
-			// }}
-			// transition={{
-			// 	type:"tween",
-			// 	ease:"easeOut",
-			// 	duration:0.19
-			// }}
-			// animate={{
-			// 	scale:1,
-            //     opacity:1
-			// }}
-			>
-				{title.map((letter,index)=>{
-					return(
-						<motion.div 
-						key={index}
-						initial={{
-							y:500*Math.pow(-1,index+1)
-
-						}}
-						tranition={{
-							delay:0.2,
-							duration:0.18,
-							type:"tween"
-						}}
-						animate={{
-							y:0
-						}}>{letter}</motion.div>
-					)
-				})}
-			</motion.div>
-		<Custom></Custom>
+			
 			
 		</motion.div>
 	)
