@@ -157,9 +157,8 @@ export default function Custom(props){
                         <motion.div 
                             id="header-cover"
                         variants={{
-                            hidden:{x:0},
-                            visible:{x:300,
-                            visibility:"hidden"}
+                            hidden:{x:0,opacity:1},
+                            visible:{x:300}
                         }}
                         style={{backgroundColor:props.props.bgcolor}}
                         transition={{type:"tween",duration:0.56,delay:0.2,ease:"easeInOut"}}
