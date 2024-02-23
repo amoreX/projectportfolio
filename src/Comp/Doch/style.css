@@ -87,7 +87,6 @@ body {
   position: absolute;
   width: 17vw;
   height: inherit;
-  background-color: #11212a;
 }
 #main-container-doch #custom #page-1 #text-div #header #header-text {
   width: inherit;
@@ -108,7 +107,6 @@ body {
   position: absolute;
   width: inherit;
   height: inherit;
-  background-color: #11212a;
 }
 #main-container-doch #custom #page-1 #text-div #body #body-text {
   position: absolute;
@@ -183,7 +181,6 @@ body {
   position: absolute;
   width: inherit;
   height: inherit;
-  background-color: #11212a;
 }
 #main-container-doch #custom #page-2 #page2-text #text {
   position: absolute;
@@ -197,6 +194,7 @@ body {
   gap: 5px;
   flex-direction: column;
   font-size: 2rem;
+  overflow: hidden;
 }
 #main-container-doch #custom #page-2 #page2-text #text #each-lang {
   position: relative;
@@ -204,6 +202,11 @@ body {
 }
 #main-container-doch #custom #page-2 #page2-text #text #each-lang #lang-cover {
   position: absolute;
-  background-color: #11212a;
   height: 33px;
+}
+#main-container-doch #custom #page-2 #back {
+  position: absolute;
+  right: 1%;
+  top: 2%;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

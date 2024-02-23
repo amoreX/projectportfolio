@@ -4,9 +4,10 @@ import Custom from "../Custom"
 import { useEffect } from "react"
 import "./Calc.css"
 export default function Calc(){
+	const propstosend={pic1:"/Assets/doch1.png",pic2:"/Assets/doch2.png",about:"About DOCH ",desc:"                            Doch is a specimen of UI design that helps in gathering latest happenings of the world around us.",vid:"/Assets/dochvid.mp4",homielist:["sass","css","html","ejs","nodejs","express","js"] ,bgcolor:"#11212a"};
+
 
 	const title=["C","A","L","C","U","L","A","T","O","R"]
-
 	useEffect(()=>{
 		const handleWheel = (event) => {
 			if (event.deltaY !== 0) {
@@ -29,44 +30,36 @@ export default function Calc(){
 	},[]);
 	return(	
 		<motion.div
-		id="main-container-Calc"
+		id="main-container-calc"
 		>
 			<motion.div 
 			id="text"
-			// initial={{
-			// 	scale:0.5,
-			// 	opacit:0
-			// }}
-			// transition={{
-			// 	type:"tween",
-			// 	ease:"easeOut",
-			// 	duration:0.19
-			// }}
-			// animate={{
-			// 	scale:1,
-            //     opacity:1
-			// }}
 			>
-				{title.map((letter,index)=>{
-					return(
-						<motion.div 
-						key={index}
-						initial={{
-							y:500*Math.pow(-1,index+1)
+				<div
+				id="text-cover-original">
+				<motion.div 
+				id="text-cover"
+				initial={{}}
+				transition={{type:"tween",delay:0.2,duration:0.38,ease:"easeInOut"}}
+				animate={{x:1500}}></motion.div>
 
-						}}
-						tranition={{
-							delay:0.2,
-							duration:0.18,
-							type:"tween"
-						}}
-						animate={{
-							y:0
-						}}>{letter}</motion.div>
-					)
-				})}
+				</div>
+				<motion.div
+				id="text-body">
+					{title.map((letter,index)=>{
+						return(
+							<motion.div
+							initial={{scale:0.6}}
+							transition={{type:"tween",duration:0.38,delay:0.05+index*0.08}}
+							animate={{scale:1}}
+							>
+								{letter}
+							</motion.div>
+						)
+					})}
+				</motion.div>
 			</motion.div>
-		<Custom></Custom>
+		<Custom props={propstosend}></Custom>
 			
 		</motion.div>
 	)

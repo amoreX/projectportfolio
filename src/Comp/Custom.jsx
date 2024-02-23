@@ -1,9 +1,32 @@
 import {motion} from 'framer-motion'
+import { useNavigate } from "react-router-dom";
 
-export default function Custom(){
+export default function Custom(props){
 
-    const li=["sass","css","html","ejs","nodejs","express","js"];
+    const navigate= useNavigate();
 
+    // const li=["sass","css","html","ejs","nodejs","express","js"];
+    // console.log(props.props.pic1);
+    const cross=(
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40px"
+          height="40px"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M19 5L5 19M5 5L9.5 9.5M12 12L19 19"
+            stroke="#000000"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+        );
+    const handlecross=()=>{
+        navigate("/");
+    }
     return(
         <motion.div
         id="custom"
@@ -15,24 +38,24 @@ export default function Custom(){
                         hidden:{top:"-60%"},
                         visible:{top:"5%"}
                     }}
-                    transition={{type:"tween",duration:0.56,delay:0.1,ease:"easeInOut"}}
+                    transition={{type:"tween",duration:0.36,delay:0.1,ease:"easeInOut"}}
                     initial="hidden"
                     whileInView="visible"
                     id="pic-1"
                     >
-                        <img  src="/Assets/doch1.png" alt="doch" ></img>
+                        <img  src={props.props.pic1} alt="doch" ></img>
                     </motion.div>
                     <motion.div
                     variants={{
                         hidden:{top:"100%"},
                         visible:{top:"45%"}
                     }}
-                    transition={{type:"tween",duration:0.56,delay:0.1,ease:"easeInOut"}}
+                    transition={{type:"tween",duration:0.36,delay:0.1,ease:"easeInOut"}}
                     initial="hidden"
                     whileInView="visible"
                     id="pic-2"
                     >
-                        <img  src="/Assets/doch2.png" alt="doch" ></img>
+                        <img  src={props.props.pic2} alt="doch" ></img>
                     </motion.div>
 
                 </div>
@@ -44,6 +67,7 @@ export default function Custom(){
                             hidden:{x:0},
                             visible:{x:300}
                         }}
+                        style={{backgroundColor:props.props.bgcolor}}
                         transition={{type:"tween",duration:0.56,delay:0.1,ease:"easeInOut"}}
                         initial="hidden"
                         whileInView="visible">
@@ -58,7 +82,7 @@ export default function Custom(){
                         initial="hidden"
                         whileInView="visible"
                         >
-                        About DOCH</motion.div>
+                        {props.props.about}</motion.div>
                     </div>
                     <div id="body">
                         <motion.div
@@ -68,6 +92,7 @@ export default function Custom(){
                             visible:{x:300}
                         }}
                         transition={{type:"tween",duration:0.56,delay:0.38,ease:"easeInOut"}}
+                        style={{backgroundColor:props.props.bgcolor}}
                         initial="hidden"
                         whileInView="visible">
                         </motion.div>
@@ -80,7 +105,7 @@ export default function Custom(){
                         transition={{type:"tween",duration:0.56,delay:0.65,ease:"easeInOut"}}
                         initial="hidden"
                         whileInView="visible">
-                            Doch is a specimen of UI design that helps in gathering latest happenings of the world around us.
+                            {props.props.desc}
                         </motion.div>
 
                     </div>
@@ -99,7 +124,7 @@ export default function Custom(){
                 whileInView="visible"
                 >
                      <video   autoPlay loop muted>
-                        <source src="/Assets/dochvid.mp4" type="video/mp4" />
+                        <source src={props.props.vid} type="video/mp4" />
                     </video>
                 </motion.div>
 
@@ -113,6 +138,7 @@ export default function Custom(){
                             hidden:{x:0},
                             visible:{x:300}
                         }}
+                        style={{backgroundColor:props.props.bgcolor}}
                         transition={{type:"tween",duration:0.56,delay:0.2,ease:"easeInOut"}}
                         initial="hidden"
                         whileInView="visible">
@@ -134,19 +160,19 @@ export default function Custom(){
 
                     
                     <div id="text">
-                        {li.map((language,index)=>{
+                        {props.props.homielist.map((language,index)=>{
                             return(
                                 <div id="each-lang">
                                     <motion.div
                                     id="lang-cover"
                                     variants={{
                                         hidden:{x:0},
-                                        visible:{x:300}
+                                        visible:{x:400}
                                     }}
                                     transition={{type:"tween",duration:0.56,delay:0.2+index*0.15,ease:"easeInOut"}}
                                     initial="hidden"
                                     whileInView="visible"
-                                    style={{width:`${language.length*17}px`}}>
+                                    style={{width:`${language.length*17}px`,backgroundColor:props.props.bgcolor}}>
 
                                     </motion.div>
                                     <motion.div
@@ -167,6 +193,9 @@ export default function Custom(){
                     </div>
                    
 
+                </div>
+                <div id="back" onClick={()=>{handlecross()}}>
+                        {cross}
                 </div>
             </div>
         </motion.div>

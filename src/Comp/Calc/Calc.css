@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 body {
   margin: 0px;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -7,45 +9,204 @@ body {
   height: 0px;
 }
 
-#main-container-Calc {
+#main-container-calc {
   position: absolute;
-  width: 400vw;
+  width: 300vw;
   height: 100vh;
   background-color: #88d18a;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 600;
+  font-weight: 400;
+  font-style: normal;
   display: flex;
   top: 0%;
   left: 0%;
   align-items: center;
   color: white;
 }
-#main-container-Calc #text {
+#main-container-calc #text {
+  overflow: hidden;
   display: flex;
   align-items: center;
   height: 100vh;
+  position: relative;
+  justify-content: center;
   width: 100vw;
-  font-size: 14.5vw;
+  cursor: default;
+  font-size: 14vw;
 }
-#main-container-Calc #custom {
+#main-container-calc #text #text-cover-original {
+  position: absolute;
+  width: 95vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 4;
+}
+#main-container-calc #text #text-cover-original #text-cover {
+  width: 95vw;
+  height: 45vh;
+  background-color: #4b754d;
+}
+#main-container-calc #text #text-body {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+}
+#main-container-calc #custom {
   height: 100vh;
-  width: 300vw;
+  width: 200vw;
   color: white;
-  background-color: pink;
   display: flex;
 }
-#main-container-Calc #custom #page-1 {
-  background-color: green;
+#main-container-calc #custom #page-1 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+#main-container-calc #custom #page-1 #text-div {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  min-width: 200px;
+  gap: 10px;
+  height: 15vh;
+}
+#main-container-calc #custom #page-1 #text-div #header {
+  position: relative;
+  width: 20vw;
+  height: 6vh;
+  min-width: 200px;
+  overflow: hidden;
+}
+#main-container-calc #custom #page-1 #text-div #header #header-cover {
+  position: absolute;
+  width: 17vw;
+  height: inherit;
+}
+#main-container-calc #custom #page-1 #text-div #header #header-text {
+  width: inherit;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin-left: 20px;
+  font-size: 1.7vw;
+}
+#main-container-calc #custom #page-1 #text-div #body {
+  position: relative;
+  width: inherit;
+  height: 100%;
+  overflow: hidden;
+}
+#main-container-calc #custom #page-1 #text-div #body #body-cover {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+#main-container-calc #custom #page-1 #text-div #body #body-text {
+  position: absolute;
+  width: inherit;
+  font-size: 1.1vw;
+  height: inherit;
+}
+#main-container-calc #custom #page-1 #pictures #pic-1 {
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  width: 50vw;
+  aspect-ratio: 1.7;
+  z-index: 2;
+  transition: 0.38s ease-in-out;
+}
+#main-container-calc #custom #page-1 #pictures #pic-1 img {
+  width: inherit;
+  aspect-ratio: inherit;
+}
+#main-container-calc #custom #page-1 #pictures #pic-1:hover {
+  scale: 1.05;
+}
+#main-container-calc #custom #page-1 #pictures #pic-1:hover:hover ~ #pic-2 {
+  transform: translateY(300px);
+}
+#main-container-calc #custom #page-1 #pictures #pic-2 {
+  position: absolute;
+  z-index: 2;
+  right: 25%;
+  width: 40vw;
+  aspect-ratio: 1.7;
+  transition: 0.38s ease-in-out;
+}
+#main-container-calc #custom #page-1 #pictures #pic-2 img {
+  width: inherit;
+  aspect-ratio: inherit;
+}
+#main-container-calc #custom #page-1 #pictures #pic-2:hover {
+  scale: 1.5;
+  transform: translateY(-40%);
+}
+#main-container-calc #custom #page-2 {
   width: 100vw;
   height: 100vh;
 }
-#main-container-Calc #custom #page-2 {
-  background-color: blue;
-  width: 100vw;
-  height: 100vh;
+#main-container-calc #custom #page-2 #video {
+  position: absolute;
+  width: 70vw;
+  height: auto;
+  right: 1%;
+  top: 10%;
 }
-#main-container-Calc #custom #page-3 {
-  background-color: cyan;
-  width: 100vw;
-  height: 100vh;
+#main-container-calc #custom #page-2 #video video {
+  width: 70vw;
+  height: auto;
+}
+#main-container-calc #custom #page-2 #page2-text {
+  position: absolute;
+  top: 10%;
+}
+#main-container-calc #custom #page-2 #page2-text #header {
+  position: relative;
+  width: 15vw;
+  height: 5vh;
+  min-width: 200px;
+  overflow: hidden;
+  margin-left: 5vw;
+  font-size: 2rem;
+}
+#main-container-calc #custom #page-2 #page2-text #header #header-cover {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+#main-container-calc #custom #page-2 #page2-text #text {
+  position: absolute;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  margin-top: 10px;
+  overflow: hidden;
+  margin-left: 6vw;
+  gap: 5px;
+  flex-direction: column;
+  font-size: 2rem;
+}
+#main-container-calc #custom #page-2 #page2-text #text #each-lang {
+  position: relative;
+  padding-inline: 5px;
+}
+#main-container-calc #custom #page-2 #page2-text #text #each-lang #lang-cover {
+  position: absolute;
+  height: 33px;
+}
+#main-container-calc #custom #page-2 #back {
+  position: absolute;
+  right: 1%;
+  top: 2%;
+  cursor: pointer;
 }/*# sourceMappingURL=Calc.css.map */

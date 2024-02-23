@@ -97,7 +97,7 @@ body{
 						width:17vw;
 						height: inherit;
 						// background-color: rgb(57, 57, 57);
-						background-color: #11212a;
+						// background-color: #11212a;
 					}
 					#header-text{
 						width: inherit;
@@ -121,7 +121,7 @@ body{
 						width: inherit;
 						height: inherit;
 						// background-color: rgb(57, 57, 57);
-						background-color: #11212a;
+						// background-color: #11212a;
 
 					}
 					#body-text{
@@ -223,7 +223,7 @@ body{
 						position:absolute;
 						width:inherit;
 						height:inherit;
-						background-color: #11212a;
+						// background-color: #11212a;
 					}
 				}
 				
@@ -241,19 +241,26 @@ body{
 						gap:5px;
 						flex-direction: column;
 						font-size: 2rem;
+						overflow: hidden;
 						#each-lang{
 							position:relative;
 							padding-inline: 5px;
 							#lang-cover{
 								position:absolute;
 								
-								background-color: #11212a;
+								// background-color: #11212a;
 								height: 33px;
 							}
 						}
 					}
 
 				
+			}
+			#back{
+				position: absolute;
+				right: 1%;
+				top:2%;
+				cursor:pointer;
 			}
 
 		}
