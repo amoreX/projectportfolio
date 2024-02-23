@@ -4,6 +4,7 @@ import Custom from "../Custom"
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import { useEffect } from "react"
 import "./Style.css"
+import "../custom.css"
 export default function Wpm(){
 	const propstosend={pic1:"/Assets/wpm1.png",pic2:"/Assets/wpm2.png",about:"About WPM ",desc:"WPM is a typing speedo-meter helping users understand their typing speed and it comes pre-built with 3 unique themes .",vid:"/Assets/wpmvid.mp4",homielist:["Sass","Css","React","Js"] ,bgcolor:"#6243a0",link:"https://wpmeter.vercel.app"};
 
@@ -28,9 +29,32 @@ export default function Wpm(){
 
 
 	},[]);
+	const handlecross=()=>{
+        // navigate("/");
+        history.back();
+    }
+	const cross=(
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40px"
+          height="40px"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M19 5L5 19M5 5L9.5 9.5M12 12L19 19"
+            stroke="#000000"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+        );
 	return(	
 		<ReactLenis options={{orientation:"horizontal"}} root>
-
+			<motion.div id="back" onClick={()=>{handlecross()}} initial={{y:-200}} animate={{y:0}} transition={{type:"tween",ease:"easeInOut"}} >
+                        {cross}
+                </motion.div>
 		<motion.div
 		id="main-container-wpm"
 		>

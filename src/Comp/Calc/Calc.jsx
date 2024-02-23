@@ -1,6 +1,8 @@
 
 import {motion} from "framer-motion"
 import Custom from "../Custom"
+import "../custom.css"
+
 import { useEffect } from "react"
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
@@ -30,8 +32,32 @@ export default function Calc(){
 
 
 	},[]);
+	const handlecross=()=>{
+        // navigate("/");
+        history.back();
+    }
+	const cross=(
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40px"
+          height="40px"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M19 5L5 19M5 5L9.5 9.5M12 12L19 19"
+            stroke="#000000"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+        );
 	return(	
 		<ReactLenis options={{orientation:"horizontal"}} root>
+		<motion.div id="back" onClick={()=>{handlecross()}} initial={{y:-200}} animate={{y:0}} transition={{type:"tween",ease:"easeInOut"}} >
+                        {cross}
+                </motion.div>
 		<motion.div
 		id="main-container-calc"
 		>

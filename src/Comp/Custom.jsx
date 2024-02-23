@@ -1,5 +1,5 @@
 import {motion} from 'framer-motion'
-
+import "./custom.css"
 export default function Custom(props){
 
 
@@ -218,15 +218,14 @@ export default function Custom(props){
                    
 
                 </div>
-                <div id="back" onClick={()=>{handlecross()}}>
-                        {cross}
-                </div>
+                
                 
                 <div id="git"
                 onClick={()=>{gitclick()}}>
                         {git}
                 </div>
             </div>
+            
         </motion.div>
     )
 }
