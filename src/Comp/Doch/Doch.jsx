@@ -48,6 +48,7 @@ export default function Doch(){
 					{title.map((letter,index)=>{
 						return(
 							<motion.div
+							key={index}
 							initial={{scale:0.6}}
 							transition={{type:"tween",duration:0.38,delay:0.05+index*0.1}}
 							animate={{scale:1}}

@@ -127,7 +127,7 @@ export default function Custom(props){
             </div>
             <div id="page-2">
 
-                <motion.div
+                {/* <motion.div
                 id="video"
                 variants={{
                     hidden:{top:"-70%",opacity:0},
@@ -140,7 +140,7 @@ export default function Custom(props){
                      <video   autoPlay loop muted>
                         <source src={props.props.vid} type="video/mp4" />
                     </video>
-                </motion.div>
+                </motion.div> */}
 
                 <div id="page2-text">
 
@@ -177,8 +177,9 @@ export default function Custom(props){
                     <div id="text">
                         {props.props.homielist.map((language,index)=>{
                             return(
-                                <div id="each-lang">
+                                <div key={index}id="each-lang">
                                     {/* <motion.div
+                                    key={index}
                                     id="lang-cover"
                                     variants={{
                                         hidden:{x:0},
@@ -191,6 +192,7 @@ export default function Custom(props){
 
                                     </motion.div> */}
                                     <motion.div
+                                    key={index}
                                     id="lang-text"
                                     variants={{
                                         hidden:{y:30,opacity:0},
