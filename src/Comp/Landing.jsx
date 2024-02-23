@@ -7,7 +7,7 @@ export default function Landing(){
 
     const navigate= useNavigate();
     const [number,setNumber]=useState(Math.floor(Math.random() * 5));
-    const [reload,setReload]=useState(localStorage.getItem('checking'));
+    const [reload,setReload]=useState(sessionStorage.getItem('checking'));
     const [text,setText]=useState(false);
     
     const [style1, setStyles1] = useState({
@@ -147,7 +147,7 @@ export default function Landing(){
     }, [number]);
     
     const handleclick1=()=>{
-        localStorage.setItem('checking', "doch");
+        sessionStorage.setItem('checking', "doch");
 
         setStyles1({
             zIndex:"4",
@@ -178,7 +178,7 @@ export default function Landing(){
         },200);
     }
     const handleclick2=()=>{
-        localStorage.setItem('checking', "calc");
+        sessionStorage.setItem('checking', "calc");
 
         setText(true);
         setStyles2({
@@ -209,7 +209,7 @@ export default function Landing(){
 
     }
     const handleclick3=()=>{
-        localStorage.setItem('checking', "weather");
+        sessionStorage.setItem('checking', "weather");
         setStyles3({
             height:"500px",
             width:"1000px",
@@ -238,7 +238,7 @@ export default function Landing(){
     }
 
     const handleclick4=()=>{
-        localStorage.setItem('checking', "git");
+        sessionStorage.setItem('checking', "git");
         
         setText(true);
         setStyles4({
@@ -267,7 +267,7 @@ export default function Landing(){
         },200);
     }
     const handleclick5=()=>{
-        localStorage.setItem('checking', "wpm");
+        sessionStorage.setItem('checking', "wpm");
         setText(true);
         setStyles5({
             height:"500px",
@@ -294,7 +294,7 @@ export default function Landing(){
         },200);
     }
     const handleclick6=()=>{
-        localStorage.setItem('checking', "me");
+        sessionStorage.setItem('checking', "me");
         setText(true);
         setStyles6({
             height:"500px",
