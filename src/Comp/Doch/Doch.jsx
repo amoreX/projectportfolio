@@ -13,7 +13,7 @@ export default function Doch(){
 			  event.preventDefault();
 			  window.scrollBy({
 				left: event.deltaY * 5,
-				behavior:"smooth",
+				// behavior:"smooth",
 			  });
 			}
 		};
