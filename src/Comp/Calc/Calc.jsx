@@ -2,6 +2,8 @@
 import {motion} from "framer-motion"
 import Custom from "../Custom"
 import { useEffect } from "react"
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+
 import "./Calc.css"
 export default function Calc(){
 	const propstosend={pic1:"/Assets/calc1.png",pic2:"/Assets/calc2.png",about:"About Catculator ",desc:"Catculator is a fun calculator with satisfying click sounds  and a cute eye pleasing UI.",vid:"/Assets/calc.mp4",homielist:["Sass","Css","React","Js"] ,bgcolor:"#4b754d",link:"https://simple-calculator-tau-sage.vercel.app"};
@@ -29,6 +31,7 @@ export default function Calc(){
 
 	},[]);
 	return(	
+		<ReactLenis options={{orientation:"horizontal"}} root>
 		<motion.div
 		id="main-container-calc"
 		>
@@ -62,5 +65,6 @@ export default function Calc(){
 		<Custom props={propstosend}></Custom>
 			
 		</motion.div>
+		</ReactLenis>
 	)
 }

@@ -1,6 +1,7 @@
 
 import {motion} from "framer-motion"
 import Custom from "../Custom"
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import { useEffect } from "react"
 import "./Style.css"
 export default function Wpm(){
@@ -28,6 +29,8 @@ export default function Wpm(){
 
 	},[]);
 	return(	
+		<ReactLenis options={{orientation:"horizontal"}} root>
+
 		<motion.div
 		id="main-container-wpm"
 		>
@@ -61,5 +64,6 @@ export default function Wpm(){
 		<Custom props={propstosend}></Custom>
 			
 		</motion.div>
+		</ReactLenis>
 	)
 }

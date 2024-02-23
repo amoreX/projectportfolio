@@ -1,6 +1,7 @@
 
 import {motion} from "framer-motion"
 import Custom from "../Custom"
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import { useEffect } from "react"
 import "./Style.css"
 export default function Git(){
@@ -27,6 +28,8 @@ export default function Git(){
 
 	},[]);
 	return(	
+		<ReactLenis options={{orientation:"horizontal"}} root>
+
 		<motion.div
 		id="main-container-git"
 		>
@@ -60,5 +63,6 @@ export default function Git(){
 		<Custom props={propstosend}></Custom>
 			
 		</motion.div>
+		</ReactLenis>
 	)
 }
