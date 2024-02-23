@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
 body{
 	margin:0px;
+	color:rgb(76, 75, 75);
+	font-family: "Josefin Sans", sans-serif;
+	
 	// overflow: hidden;
 }
 ::-webkit-scrollbar{
@@ -12,23 +18,61 @@ body{
 	height:100vh;
 	background-color: #eec281;
 	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 600;
-	display: flex;
+	// font-weight: 600;
+	// display: flex;
 	top:0%;
 	left:0%;
-	align-items: center;
-	color:white;
+	// align-items: center;
 
-	#text{
-		justify-content: center;
-		display: flex;
-		align-items: center;
-		height:100vh;
-		width:100vw;
-		// background-color: rgb(67, 67, 67);
-		// position:absolute;
-		font-size: 21vw;
+	#header{
+		position:relative;
+		width:120px;
+		font-size: 1.5rem;
+		margin-left: 30px;
+		margin-top: 40px;
+		height:30px;
+		cursor: default;
+		overflow: hidden;
+		// background-color: aqua;
+		#header-cover{
+			position:absolute;
+			background-color:#a78859 ;
+			width: inherit;
+			height:inherit;
+			z-index: 4;
+		}
+		#header-text{
+			z-index: 3;
+		}
+
 	}
+	#body{
+		position:relative;
+		width:170px;
+		font-size: 1.5rem;
+		margin-left: 30px;
+		cursor: default;
+		margin-top: 7px;
+		height:130px;
+		overflow: hidden;
+		// background-color: aqua;
+		#body-cover{
+			position:absolute;
+			background-color:#a78859 ;
+			width: inherit;
+			height:inherit;
+			z-index: 4;
+		}
+		#body-text{
+			z-index: 3;
+		}
 
+	}
+	#magik{
+		margin-left: 30px;
+		cursor:pointer;
+
+		
+	}
 	
 }
