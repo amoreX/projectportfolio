@@ -173,7 +173,7 @@ body {
 #main-container-doch #custom #page-2 #page2-text #header {
   position: relative;
   width: 15vw;
-  height: 6vh;
+  height: 5vh;
   min-width: 200px;
   overflow: hidden;
   margin-left: 5vw;
@@ -186,5 +186,24 @@ body {
   background-color: #11212a;
 }
 #main-container-doch #custom #page-2 #page2-text #text {
+  position: absolute;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 6vw;
+  gap: 5px;
+  flex-direction: column;
+  font-size: 2rem;
+}
+#main-container-doch #custom #page-2 #page2-text #text #each-lang {
   position: relative;
+  padding-inline: 5px;
+}
+#main-container-doch #custom #page-2 #page2-text #text #each-lang #lang-cover {
+  position: absolute;
+  background-color: #11212a;
+  height: 33px;
 }/*# sourceMappingURL=style.css.map */

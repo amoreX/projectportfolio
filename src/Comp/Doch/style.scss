@@ -212,7 +212,7 @@ body{
 				#header{
 					position:relative;
 					width:15vw;
-					height:6vh;
+					height:5vh;
 					min-width: 200px;
 					overflow: hidden;
 					margin-left: 5vw;
@@ -226,12 +226,34 @@ body{
 						background-color: #11212a;
 					}
 				}
+				
+				
 
-				#text{
-					position:relative;
-				}
+					
+					#text{
+						position:absolute;
+						height:fit-content;
+						width:fit-content;
+						// background-color: red;
+						display: flex;
+						margin-top: 10px;
+						margin-left: 6vw;
+						gap:5px;
+						flex-direction: column;
+						font-size: 2rem;
+						#each-lang{
+							position:relative;
+							padding-inline: 5px;
+							#lang-cover{
+								position:absolute;
+								
+								background-color: #11212a;
+								height: 33px;
+							}
+						}
+					}
 
-
+				
 			}
 
 		}

@@ -10,6 +10,30 @@ export default function Custom(){
         >
             <div id="page-1">
                 <div id="pictures">
+                    <motion.div
+                    variants={{
+                        hidden:{top:"-60%"},
+                        visible:{top:"5%"}
+                    }}
+                    transition={{type:"tween",duration:0.56,delay:0.1,ease:"easeInOut"}}
+                    initial="hidden"
+                    whileInView="visible"
+                    id="pic-1"
+                    >
+                        <img  src="/Assets/doch1.png" alt="doch" ></img>
+                    </motion.div>
+                    <motion.div
+                    variants={{
+                        hidden:{top:"100%"},
+                        visible:{top:"45%"}
+                    }}
+                    transition={{type:"tween",duration:0.56,delay:0.1,ease:"easeInOut"}}
+                    initial="hidden"
+                    whileInView="visible"
+                    id="pic-2"
+                    >
+                        <img  src="/Assets/doch2.png" alt="doch" ></img>
+                    </motion.div>
 
                 </div>
                 <div id="text-div">
@@ -61,9 +85,6 @@ export default function Custom(){
 
                     </div>
                 </div>
-                <div id="pictures">
-                        
-                </div>
             </div>
             <div id="page-2">
 
@@ -73,7 +94,7 @@ export default function Custom(){
                     hidden:{top:"-70%",opacity:0},
                     visible:{top:"10%",opacity:1},
                 }}
-                transition={{type:"tween",duration:0.56,delay:0.1,ease:"easeInOut"}}
+                transition={{type:"tween",duration:0.56,delay:0.65,ease:"easeInOut"}}
                 initial="hidden"
                 whileInView="visible"
                 >
@@ -92,7 +113,7 @@ export default function Custom(){
                             hidden:{x:0},
                             visible:{x:300}
                         }}
-                        transition={{type:"tween",duration:0.56,delay:0.1,ease:"easeInOut"}}
+                        transition={{type:"tween",duration:0.56,delay:0.2,ease:"easeInOut"}}
                         initial="hidden"
                         whileInView="visible">
                         </motion.div>
@@ -103,30 +124,48 @@ export default function Custom(){
                             hidden:{y:25,opacity:0},
                             visible:{y:0,opacity:1}
                         }}
-                        transition={{type:"tween",duration:0.56,delay:0.1,ease:"easeInOut"}}
+                        transition={{type:"tween",duration:0.56,delay:0.2,ease:"easeInOut"}}
                         initial="hidden"
                         whileInView="visible"
                         >
                         My Homies </motion.div>
 
                     </div>
+
                     
                     <div id="text">
                         {li.map((language,index)=>{
                             return(
                                 <div id="each-lang">
                                     <motion.div
-                                    id="lang-cover">
+                                    id="lang-cover"
+                                    variants={{
+                                        hidden:{x:0},
+                                        visible:{x:300}
+                                    }}
+                                    transition={{type:"tween",duration:0.56,delay:0.2+index*0.15,ease:"easeInOut"}}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    style={{width:`${language.length*17}px`}}>
 
                                     </motion.div>
                                     <motion.div
-                                    id="lang-text">
+                                    id="lang-text"
+                                    variants={{
+                                        hidden:{y:30,opacity:0},
+                                        visible:{y:0,opacity:1}
+                                    }}
+                                    transition={{type:"tween",duration:0.56,delay:0.2+index*0.15,ease:"easeInOut"}}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    >
                                         {language}
                                     </motion.div>
                                 </div>
                             )
                         })}
                     </div>
+                   
 
                 </div>
             </div>
