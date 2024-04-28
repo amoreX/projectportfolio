@@ -103,7 +103,7 @@ export default function Custom(props){
                         id="body-cover"
                             variants={{
                             hidden:{x:0},
-                            visible:{x:300}
+                            visible:{x:3000}
                         }}
                         transition={{type:"tween",duration:0.56,delay:0.38,ease:"easeInOut"}}
                         style={{backgroundColor:props.props.bgcolor}}
