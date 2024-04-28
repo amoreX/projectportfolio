@@ -79,7 +79,7 @@ export default function Custom(props){
                             id="header-cover"
                         variants={{
                             hidden:{x:0},
-                            visible:{x:300}
+                            visible:{x:1000}
                         }}
                         style={{backgroundColor:props.props.bgcolor}}
                         transition={{type:"tween",duration:0.56,delay:0.1,ease:"easeInOut"}}
@@ -158,7 +158,7 @@ export default function Custom(props){
                             id="header-cover"
                         variants={{
                             hidden:{x:0,opacity:1},
-                            visible:{x:300}
+                            visible:{x:800}
                         }}
                         style={{backgroundColor:props.props.bgcolor}}
                         transition={{type:"tween",duration:0.56,delay:0.2,ease:"easeInOut"}}
