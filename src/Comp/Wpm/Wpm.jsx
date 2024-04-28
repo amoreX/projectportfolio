@@ -67,7 +67,7 @@ export default function Wpm(){
 				id="text-cover"
 				initial={{}}
 				transition={{type:"tween",delay:0.2,duration:0.38,ease:"easeInOut"}}
-				animate={{x:1500}}></motion.div>
+				animate={{x:3500}}></motion.div>
 
 				</div>
 				<motion.div
